@@ -52,6 +52,42 @@
     </tr>
     <?php endforeach; ?>
 </table>
+
+<?php
+// les data Lion du tableau Alimentation pour les afficher à chaque ajout
+  $sql = "SELECT * FROM alimentation WHERE animal = 'zebre'";
+  $result = mysqli_query($conn,$sql);
+  $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  mysqli_free_result($result);
+  mysqli_close($conn);
+
+
+
+      // Check for errors
+      if ($result === false) {
+          die("Error executing view: $result");
+
+      }else
+      {
+        echo "Nourriture view successfully";
+      }
+  ?>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Nourriture</th>
+        <th>Quantite</th>
+    </tr>
+    <?php foreach ($row as $rows): ?>
+    <tr>
+        <td><?php echo $rows['date']; ?></td>
+        <td><?php echo $rows['time']; ?></td>
+        <td><?php echo $rows['nourriture']; ?></td>
+        <td><?php echo $rows['quantite']; ?></td>
+    </tr>
+    <?php endforeach; ?>
+</table>
 <button onclick="history.back()">Go Back</button>
 
   </body>

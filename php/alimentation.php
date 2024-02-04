@@ -22,13 +22,12 @@ x  <!DOCTYPE html>
       $animal = htmlspecialchars(strip_tags($_POST['animal']));
       $date = htmlspecialchars(strip_tags($_POST['date']));
       $time = htmlspecialchars(strip_tags($_POST['time']));
-      $observation = htmlspecialchars(strip_tags($_POST['observation']));
-      $etat = htmlspecialchars(strip_tags($_POST['etat']));
-      $amelioration = htmlspecialchars(strip_tags($_POST['amelioration']));
+      $nourriture = htmlspecialchars(strip_tags($_POST['nourriture']));
+      $quantite = htmlspecialchars(strip_tags($_POST['quantite']));
 
 
       // Insert data into database
-      $query = "INSERT into `alimentation` (animal, date, time, observation, etat, amelioration) VALUES ('$animal', '$date', '$time', '$observation', '$etat', '$amelioration')";
+      $query = "INSERT into `alimentation` (animal, date, time, nourriture, quantite) VALUES ('$animal', '$date', '$time', '$nourriture', '$quantite')";
 
       $stmt = mysqli_query($conn, $query);
       // Check for errors
@@ -37,7 +36,7 @@ x  <!DOCTYPE html>
 
       }else
       {
-        echo "Observation added successfully";
+        echo "Alimentation added successfully";
       }
     
     }
@@ -109,21 +108,18 @@ x  <!DOCTYPE html>
       <label for="time">Time:</label>
       <input class="box-input" type="text" id="time" name="time" required>
       <br>
-      <label for="observation">Observation:</label>
-      <textarea id="observation" name="observation" rows="4" cols="50" required></textarea>
+      <label for="nourriture">Observation:</label>
+      <textarea id="nourriture" name="nourriture" rows="4" cols="50" required></textarea>
       <br>
-      <label for="etat">Etat:</label>
-      <input class="box-input" type="text" id="etat" name="etat" required>
+      <label for="quantite">Etat:</label>
+      <input class="box-input" type="text" id="quantite" name="quantite" required>
       <br>
-      <label for="amelioration">Amélioration:</label>
-      <textarea id="amelioration" name="amelioration" rows="4" cols="50" required></textarea>
-      <br>
-      <input type="submit" name="submit" value="Add Observation">
+      <input type="submit" name="submit" value="Add Nourriture">
     </form>
 
     <a href="animaux.php">Carnet de sante</a>
     <a href="logout.php">Déconnexion</a>
-    <a href="ac-vet.php">HOME</a>
+    <a href="ac-regul.php">HOME</a>
     </ul>
     </div>
   </body>

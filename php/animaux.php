@@ -13,6 +13,9 @@
     echo'Bienvenue Animaux';
     ?>
  <h1>body horror</h1>
+ <a href="logout.php">Déconnexion</a>
+ <button onclick="history.back()">Go Back</button>
+
 <div class="card">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
