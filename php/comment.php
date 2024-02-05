@@ -6,61 +6,75 @@
     <title>Document</title>
 </head>
 <body>
-    <!--form that will allow the user to add a comment -->
-    <h2>Add Comment: </h2>
-    <form action="check_comment.php" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Comment</title>
+</head>
+<body>
+    
 
-    <input type="text" name="username" placeholder="Identifiant">
-        <br><br>
+   
+   
+<!-- Form to add a comment -->
+<h2>Add Comment:</h2>
+    <form action="" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" placeholder="Identifiant"><br><br>
+
         <h3>Rate your visit to the zoo:</h3>
-        <input type="radio" id="rateCircle" name="visitRating" value="1">
-        <label for="rateCircle">1/5</label><br>
-        <input type="radio" id="rateCircle" name="visitRating" value="2">
-        <label for="rateCircle">2/5</label><br>
-        <input type="radio" id="rateCircle" name="visitRating" value="3">
-        <label for="rateCircle">3/5</label><br>
-        <input type="radio" id="rateCircle" name="visitRating" value="4">
-        <label for="rateCircle">4/5</label><br>
-        <input type="radio" id="rateCircle" name="visitRating" value="5">
-        <label for="rateCircle">5/5</label><br>
-        <br><br>        
-        <input type="date" name="date" placeholder="Date of Visit">
-        <br><br>
-        <input type="text" name="accompagnant" placeholder="Accompagnant">
-        <br><br>
-        <textarea rows="4" cols="50" name="comment" placeholder="Votre avis nous intéresse, n'hésitez pas à nous faire part de vos remarques, suggestions ou critiques. Votre commentaire sera publié après validation."></textarea>
-        <br><br>
+        <label for="rate1">1/5</label>
+        <input type="radio" id="rate1" name="visitRating" value="1"><br>
+        <label for="rate2">2/5</label>
+        <input type="radio" id="rate2" name="visitRating" value="2"><br>
+        <label for="rate3">3/5</label>
+        <input type="radio" id="rate3" name="visitRating" value="3"><br>
+        <label for="rate4">4/5</label>
+        <input type="radio" id="rate4" name="visitRating" value="4"><br>
+        <label for="rate5">5/5</label>
+        <input type="radio" id="rate5" name="visitRating" value="5"><br><br>
+
+        <label for="date">Date of Visit:</label><br>
+        <input type="date" id="date" name="date"><br><br>
+
+        <label for="accompagnant">Accompaniment:</label><br>
+        <input type="text" id="accompagnant" name="accompagnant" placeholder="Accompagnant"><br><br>
+
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Your feedback is important to us. Please share your thoughts, suggestions, or criticisms. Your comment will be published after moderation."></textarea><br><br>
+
         <input type="submit" name="submit" value="Add Comment">
     </form>
-
-    <!--button to go back to the previous page -->
-    <button onclick="history.back()">Go Back</button>
-    <!--send date to the table comments in the database -->
-    <?php
-    require('connexion.php');
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-    // Check if the submit button was clicked
-    if (isset($_POST['submit'])) {
-        // Get the data from the form
+    <!-- php code to add data to the table comments  if the form is submitted -->
+<?php
+    if(isset($_POST['submit'])){
         $username = $_POST['username'];
-        $visitRating = $_POST['visitRating'];
-        $date = $_POST['date'];
+        $visitRating = $_POST['visitRating'] ?? 0 ; 
+        $time = date('H:i:s');
+        $date = date_create($_POST["date"].$time);
+        $date = date_format($date, 'Y-m-d H:i:s');
         $accompagnant = $_POST['accompagnant'];
         $comment = $_POST['comment'];
-        // Insert the data into the table 'comments'
-        $sql = "INSERT INTO `comments` (`userName`, `visitRating`, `date`, `accompagnant`, `comment`) VALUES ( '$username', '$visitRating', '$date', '$accompagnant', '$comment')";
-        // Execute the query
-        if (mysqli_query($conn, $query)) {
-            echo "Comment added successfully!";
-        } else {
-            echo "Error: " . $query . "<br>" . mysqli_error($conn);
-        }
-        }
-    ?>
 
+        //connect to the 
+        require('connexion.php'); 
+        
+        //insert into the database
+      
+            $stmt = $conn->prepare("INSERT INTO `comments`( username, visitRating, date, accompagnant, comment) values( '$username', '$visitRating', '$date', ' $accompagnant', '$comment')");
+            $stmt->execute();
+            echo "Comment added successfully...";
+            //si réussis afficher les données dans la page check_comment
+            header('location: check_comment.php');
+            }else{
+                echo "error"; 
+        }
+?>  
+
+ <!--button to go back to the previous page -->
+ <button onclick="history.back()">Go Back</button>
 <a href="ac-regul.php">HOME</a>
 
 

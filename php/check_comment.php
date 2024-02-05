@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+ 
+
     
 <?php
   require('connexion.php');
@@ -13,36 +15,30 @@
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-//afficher les commentaires non validés
 $query = "SELECT * FROM comments WHERE validate = 0";
 $result = mysqli_query($conn, $query);
 $comments = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//afficher les commentaires
-
-
-//ajouter un bouton validate pour valider les commentaires
-foreach ($comments as $comments) {
-    echo "<div>";
-    echo "<p>{$comment['username']}</p>";
-    echo "<p>{$comment['visitRating']}</p>";
-    echo "<p>{$comment['date']}</p>";
-    echo "<p>{$comment['accompagnant']}</p>";
-    echo "<p>{$comment['comment']}</p>";
-    echo "<a href='avis.php'>Validate</a>";
-    echo "</div>";
+//ajouter un bouton validate ET delete
+echo "<h1>Comments to validate OR DELETE</h1>\n";
+foreach ($comments as $comment){
+    echo "<h2>{$comment['username']}</h2>\n";
+    echo "<p>{$comment['comment']}</p>\n";
+    echo "<a href='check_comment.php?validate={$comment['id']}'>Validate</a>\n";
+    echo "<a href='check_comment.php?delete={$comment['id']}'>Delete</a>\n";
 }
-//si, bouton valider changer le champ validate a 1 dans la base de données
+
+// si, le bouton validate est cliqué, le commentaire est validé et s'affiche dans la page avis.php
 if (isset($_GET['validate'])) {
     $id = $_GET['validate'];
     $query = "UPDATE comments SET validate = 1 WHERE id = $id";
     mysqli_query($conn, $query);
-    header('Location: check_comment.php');
-    exit;
+    header('location: avis.php');
 }
+
+
+
+
 ?>
-
-
 
 <!--button to go back to the previous page -->
 <button onclick="history.back()">Go Back</button>
