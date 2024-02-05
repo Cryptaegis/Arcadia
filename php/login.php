@@ -24,7 +24,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     $user = mysqli_fetch_assoc($result);
     // vérifier si l'utilisateur est un administrateur ou un utilisateur
     if ($user['type'] == 'admin') {
-      header('location: home.php');
+      header('location: admin.php');
     } elseif ($user['type'] == 'vétérinaire') {
       header('location: ac-vet.php');
     } elseif ($user['type'] == 'régulateur') {

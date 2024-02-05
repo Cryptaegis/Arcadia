@@ -42,7 +42,7 @@
         <label for="accompagnant">Accompaniment:</label><br>
         <input type="text" id="accompagnant" name="accompagnant" placeholder="Accompagnant"><br><br>
 
-        <label for="comment">Comment:</label><br>
+        <label for="comment">Avis:</label><br>
         <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Your feedback is important to us. Please share your thoughts, suggestions, or criticisms. Your comment will be published after moderation."></textarea><br><br>
 
         <input type="submit" name="submit" value="Add Comment">

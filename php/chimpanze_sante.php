@@ -21,7 +21,6 @@
   $resultat = mysqli_query($conn,$query);
   $row = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
   mysqli_free_result($resultat);
-  mysqli_close($conn);
 
 
 
@@ -59,7 +58,6 @@
   $result = mysqli_query($conn,$sql);
   $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
   mysqli_free_result($result);
-  mysqli_close($conn);
 
 
 

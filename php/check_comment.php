@@ -34,7 +34,13 @@ if (isset($_GET['validate'])) {
     mysqli_query($conn, $query);
     header('location: avis.php');
 }
-
+//si, le button delete
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    $query = "DELETE FROM comments WHERE id = $id";
+    mysqli_query($conn, $query);
+    header('location: avis.php');
+}
 
 
 
