@@ -37,3 +37,10 @@ CREATE TABLE alimentation
     comment varchar(255)  NOT NULL,
     validate BINARY(1) DEFAULT 0 NOT NULL
     )ENGINE = InnoDB;
+
+       CREATE TABLE services
+(
+    id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    libelle varchar(255)  NOT NULL,
+    descriptionService varchar(255) NOT NULL
+)ENGINE = InnoDB;

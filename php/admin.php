@@ -16,7 +16,15 @@
     <div class="sucess">
     <h1>Bienvenue <?php echo $_SESSION['username']; ?>!</h1>
     <p>C'est votre espace admin.</p>
+
     <a href="add_user.php">Ajout Utilisateurs</a>
+    <br>
+    <a href="form_service.php">Ajout services</a>
+    <br>
+    <a href="modif_service.php">Modifier services</a>
+    <br>
+    <a href="supp_service.php">Suprrimer Services</a>
+    <br>
   <!-- Admin 1 >>login= admin mdp= 789456-->
     <a href="logout.php">Déconnexion</a>
     </ul>
