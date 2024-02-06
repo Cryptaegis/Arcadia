@@ -9,7 +9,7 @@
     <h1>Services Arcadia</h1>
     <h2>Services</h2>
     <p>Voici la liste des services que nous proposons:</p>
-    <!--ajout de la liste des services à partir de la base donnée-->
+    <!--ajout de la liste des services à partir de la base donnée avec un bouton modifier qui envoie vers une autre page-->      
     <?php
     // Attempt to connect to the database   
     require "connexion.php";
@@ -46,6 +46,12 @@
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn
             );}
             ?>
+
+         
+    <h2>Modifier les services</h2>
+    <p>Vous pouvez modifier les services ci-dessus en cliquant sur le lien <a href="modif_service.php">"Modifier"</a>.
+    Oublie pas de retirer le lien pour que seul les admin puisse y accéder!<br/>
+</p>
 <!--links-->
 <br>
 <button onclick="history.back()">Go Back</button>
