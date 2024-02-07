@@ -117,7 +117,7 @@ x  <!DOCTYPE html>
       <input type="submit" name="submit" value="Add Nourriture">
     </form>
 
-    <a href="animaux.php">Carnet de sante</a>
+    <a href="carnet_sante.php">Carnet de sante</a>
     <a href="logout.php">Déconnexion</a>
     <a href="ac-regul.php">HOME</a>
     </ul>

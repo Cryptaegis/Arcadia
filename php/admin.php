@@ -19,12 +19,22 @@
 
     <a href="add_user.php">Ajout Utilisateurs</a>
     <br>
+    <h3>Les services</h3>
+    <br>
     <a href="form_service.php">Ajout services</a>
     <br>
     <a href="modif_service.php">Modifier services</a>
     <br>
-    <a href="supp_service.php">Suprrimer Services</a>
+    <h3>Les Habitats</h3>
     <br>
+    <a href="ajout_habitat.php">Ajouter un habitat</a><br>
+    <a href="modif_habitat.php">Modifier les habitats</a><br>
+    <a href="habitat.php">Page habitats</a><br>
+    <h3>Compte rendu Vétérinaire</h3>
+    <a href="carnet_sante.php">Carnet de santé</a><br>
+
+    <br>
+    
   <!-- Admin 1 >>login= admin mdp= 789456-->
     <a href="logout.php">Déconnexion</a>
     </ul>

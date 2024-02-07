@@ -121,7 +121,7 @@
       <input type="submit" name="submit" value="Add Observation">
     </form>
 
-    <a href="animaux.php">Carnet de sante</a>
+    <a href="carnet_sante.php">Carnet de santé</a>
     <a href="logout.php">Déconnexion</a>
     <a href="ac-vet.php">HOME</a>
     </ul>

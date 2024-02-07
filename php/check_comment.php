@@ -41,9 +41,6 @@ if (isset($_GET['delete'])) {
     mysqli_query($conn, $query);
     header('location: avis.php');
 }
-
-
-
 ?>
 
 <!--button to go back to the previous page -->

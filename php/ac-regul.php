@@ -20,7 +20,7 @@
     </ul>
     </div>
     <a href="ac-regul.php">HOME</a>
-    <a href="animaux.php">Carnet de santé</a>
+    <a href="carnet_sante.php">Carnet de santé</a>
     <a href="alimentation.php">Add Alimentation</a>
     <a href="comment.php">Add Comment</a>
     <a href="avis.php">Avis</a>

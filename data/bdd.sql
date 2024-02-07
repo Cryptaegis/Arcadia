@@ -44,3 +44,20 @@ CREATE TABLE alimentation
     libelle varchar(255)  NOT NULL,
     descriptionService varchar(255) NOT NULL
 )ENGINE = InnoDB;
+
+   CREATE TABLE habitat
+(
+    id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nom varchar(255)  NOT NULL,
+    descriptionHabitat varchar(255) NOT NULL,
+    animaux varchar(255) NOT NULL,
+    validate BINARY(1) DEFAULT 0 NOT NULL
+)ENGINE = InnoDB;
+
+  CREATE TABLE animaux
+(
+    id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    prenom varchar(255)  NOT NULL,
+    race varchar(255) NOT NULL,
+    habitat varchar(255) NOT NULL
+)ENGINE = InnoDB;

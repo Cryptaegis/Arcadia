@@ -6,22 +6,38 @@
     <title>Habitat</title>
 </head>
 <body>
-    <?php
-    echo'Bienvenue bitch';
-    ?>
+   
     <h1>Habitat</h1>
-    <h2>Savane :</h2>
-    <p>Lion :</p>
-    <p>zèbre</p>
-    <p>Girafe</p>
-    <p>Chimpanzés</p>
-    <p>Aigle arpia</p>
-    <p>Jaguar</p>
-    <h2>Marais</h2>
-    <p>Cigogne</p>
-    <p>Loutre</p>
-    <p>Canard</p>
-    
-    
+   <!--show only the validate habitat-->
+   <?php
+    require('connexion.php');
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    // display only the validate comments
+    $query = "SELECT * FROM habitat WHERE validate = 1 ORDER BY id DESC";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    ?>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Comment</th>
+            <th>Animaux</th>
+        </tr>
+        <?php foreach ($row as $row): ?>
+        <tr>
+            <td><?php echo $row['nom']; ?></td>
+            <td><?php echo $row['descriptionHabitat']; ?></td>
+            <td><?php echo $row['animaux']; ?></td>
+        </tr>
+        <?php endforeach; ?>
+
+        </table>
+        <button onclick="history.back()">Go Back</button>
+        <a href="admin.php">Home</a>
+
 </body>
 </html>

@@ -18,6 +18,8 @@
     <p>C'est votre espace Vétérinaire.</p>
     <!--add a form and send information in the page habitat.php?-->
     <a href="compte_rendu.php">Compte rendu</a>
+    <a href="carnet_sante.php">Carnet de sante</a>
+
     <button onclick="history.back()">Go Back</button>
 
     <a href="logout.php">Déconnexion</a>

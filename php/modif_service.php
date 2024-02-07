@@ -25,47 +25,20 @@
                 echo "<th>id</th>";
                 echo "<th>service</th>";
                 echo "<th>description</th>";
-                //create a form that modify the data from the table 'services' each I click on validate
-                echo "<th>validate</th>";
-            echo "</tr>";
-            while($row = mysqli_fetch_assoc($result)){
-                echo "<form action='service.php' method='post'>";
-                echo "<tr>";
-                echo "<td>" . $row['id'] . "</td>";
-                echo "<td><input type='text' name='libelle' value='" . $row['libelle'] . "'></td>";
-                echo "<td><input type='text' name='descriptionService' value='" . $row['descriptionService'] . "'></td>";
-                echo "<td><input type='hidden' name='id' value='" . $row['id'] . "'></td>";
-                /*add an input submit with the name 'action' and the value 'modify'
-                to send the data to the page service.php*/
-                echo "<td><input type='submit' name='action' value='modify'></td>";
                 echo "</tr>";
-                echo "</form>";
-            }
-            echo "</table>";
-            // Free result set
-            //si le bouton est cliqué, renvoyer vers la page service.php avec les nouvelles données dans $_POST[]
-    if (isset($_POST['submit'])){
-        $libelle = $_POST['libelle'];
-        $descriptionService = $_POST['descriptionService'];
-        $id = $_POST['id'];
-        $sql = "UPDATE services SET libelle= '$libelle', descriptionService= '$descriptionService' WHERE id= '$id'";
-        if(mysqli_query($conn, $sql)){
-            echo "Records were updated successfully.";
-        } else{
-            echo "ERROR: Could not able to execute $sql. ";
-        }
-        }}
-            ?>
+
+
             
                
         while($row = mysqli_fetch_array($result)){
-            echo "<form action='service.php' method='post'>";
+            echo "<form action='' method='post'>";
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
             echo "<td><input type='text' name='libelle' value='" . $row['libelle'] . "'></td>";
             echo "<td><input type='text' name='descriptionService' value='" . $row['descriptionService'] . "'></td>";
             echo "<td><input type='hidden' name='id' value='" . $row['id'] . "'></td>";
             echo "<td><input type='submit' value='Valider'></td>";
+            echo "<td><input type='submit' name='delete' value='Supprimer'></td>";
             echo "</tr>";
             echo "</form>";
         }
@@ -76,7 +49,7 @@
     } else{
         echo "No records matching your query were found.";
     }
-    //si le bouton est cliqué, renvoyer vers la page service.php avec les nouvelles données dans $_POST[]
+    //Modification des données
     if
     (isset($_POST['libelle']) && isset($_POST['descriptionService']) && isset($_POST['id'])){
         $libelle = $_POST['libelle'];
@@ -87,10 +60,29 @@
             echo "Records were updated successfully.";
         } else{
             echo "ERROR: Could not able to execute $sql. ";
+            }
+
         }
-        }
+        //suppression des données 
+        if(isset($_POST["delete"])) {
+            $id=$_POST["id"];
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+                }
+                $sql="DELETE FROM `services` WHERE id= '$id'";
+                if ($conn->query($sql) == TRUE) {
+                    echo "Je vous félicite vous venez de supprimer un service.";
+                }
+                else {
+                    echo "Error deleting record: " . $conn->error;
+                }
+            }
+
     
 
     ?>
+    <!--link-->
+    <a href="service.php">Retour aux services</a>
+
 </body>
 </html>
