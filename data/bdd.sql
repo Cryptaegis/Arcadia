@@ -3,14 +3,15 @@ CREATE TABLE users
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     username varchar(255)  NOT NULL,
     password varchar(255) NOT NULL,
-    admin BINARY(11) DEFAULT 0 NOT NULL 
+   confirme BOOLEAN NOT NULL DEFAULT 0
 )ENGINE = InnoDB;
+
 CREATE TABLE observation
 (
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     animal varchar(255)  NOT NULL,
-    date TEXT(10) NOT NULL,
-    time int(4),
+    date date NOT NULL,
+    time text(4) NOT NULL,
     observation varchar(255)  NOT NULL,
     etat varchar(255) NOT NULL,
     amelioration varchar(255) NOT NULL 
@@ -19,8 +20,9 @@ CREATE TABLE observation
 CREATE TABLE alimentation
 (
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    animal varchar(255)  NOT NULL,
-    date TEXT(10) NOT NULL,
+    animal varchar(255)  NOT NULL
+    FOREIGN KEY REFERENCES animaux(prenom) ON DELETE CASCADE,
+    date DATETIME,
     time int(4),
     nourriture varchar(255) NOT NULL,
     quantite varchar(255)  NOT NULL
@@ -50,14 +52,14 @@ CREATE TABLE alimentation
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     nom varchar(255)  NOT NULL,
     descriptionHabitat varchar(255) NOT NULL,
-    animaux varchar(255) NOT NULL,
+    animaux varchar(255) NOT NULL FOREIGN KEY REFERENCES animaux(habitat) ON DELETE CASCADE,
     validate BINARY(1) DEFAULT 0 NOT NULL
 )ENGINE = InnoDB;
 
-  CREATE TABLE animaux
+    CREATE TABLE animaux
 (
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     prenom varchar(255)  NOT NULL,
     race varchar(255) NOT NULL,
-    habitat varchar(255) NOT NULL
-)ENGINE = InnoDB;
+    FOREIGN KEY (id) REFERENCES habitat(nom) ON DELETE CASCADE
+    )ENGINE = InnoDB;

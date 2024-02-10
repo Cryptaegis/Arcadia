@@ -18,7 +18,6 @@
 
   // Check if form is submitted
   if (isset($_POST['submit'])) {
-      // Sanitize and store form data in the table arcadia
       $animal = htmlspecialchars(strip_tags($_POST['animal']));
       $date = htmlspecialchars(strip_tags($_POST['date']));
       $time = htmlspecialchars(strip_tags($_POST['time']));
@@ -104,10 +103,10 @@
   </div>
 
       <label for="date">Date:</label>
-      <input class="box-input" type="text" id="date" name="date" required>
+      <input class="box-input" type="date" id="date" name="date" required>
       <br>
-      <label for="time">Time:</label>
-      <input class="box-input" type="text" id="time" name="time" required>
+      <label for="time">Heure:</label>
+      <input type="time" id="time" name="time" min="07:00" max="18:00" required />
       <br>
       <label for="observation">Observation:</label>
       <textarea id="observation" name="observation" rows="4" cols="50" required></textarea>

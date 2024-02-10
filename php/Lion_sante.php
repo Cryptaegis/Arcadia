@@ -69,6 +69,7 @@
       {
         echo "Nourriture view successfully";
       }
+
   ?>
 <table>
     <tr>
@@ -87,7 +88,10 @@
     <?php endforeach; ?>
 </table>
 
+
+
 <button onclick="history.back()">Go Back</button>
+
 
   </body>
 </html>

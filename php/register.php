@@ -23,12 +23,19 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
   $res = mysqli_query($conn, $query);
 
     if($res){
-       echo "<div class='sucess'>
-             <h3>Vous êtes inscrit avec succès.</h3>
-             <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
-       </div>";
+      include("sendmail.php");
+      
+      echo "
+      <div class='sucess'>
+      <p class='success'>Inscription réussie ! Vous allez
+      recevoir un mail de bienvenue.</p>
+      <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
+      </div>";
+    }else{
+      echo "<p class='error'>Une erreur s'est produite lors de votre inscription.</p>";
     }
-}
+
+  }
 ?>
 <form class="box" action="" method="post">
   <h1 class="box-logo box-title">
@@ -37,13 +44,15 @@ if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['password'])){
     <h1 class="box-title">S'inscrire</h1>
   <input type="text" class="box-input" name="username" 
   placeholder="Nom d'utilisateur" required />
-  
-    <input type="text" class="box-input" name="email" 
+  <br>
+  <label>Email:</label><br>
+    <input type="email" class="box-input" name="email" 
   placeholder="Email" required />
-  
+  <br>
+  <label for="p">Password:</label><br>
     <input type="password" class="box-input" name="password" 
   placeholder="Mot de passe" required />
-  
+  <br>
     <input type="submit" name="submit" 
   value="S'inscrire" class="box-button" />
   

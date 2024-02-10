@@ -103,7 +103,7 @@ x  <!DOCTYPE html>
   </div>
 
       <label for="date">Date:</label>
-      <input class="box-input" type="text" id="date" name="date" required>
+      <input class="box-input" type="date" id="date" name="date" required>
       <br>
       <label for="time">Time:</label>
       <input class="box-input" type="text" id="time" name="time" required>

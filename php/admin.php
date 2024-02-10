@@ -31,7 +31,7 @@
     <a href="modif_habitat.php">Modifier les habitats</a><br>
     <a href="habitat.php">Page habitats</a><br>
     <h3>Compte rendu Vétérinaire</h3>
-    <a href="carnet_sante.php">Carnet de santé</a><br>
+    <a href="admin_cr.php">Carnet de santé</a><br>
 
     <br>
     
