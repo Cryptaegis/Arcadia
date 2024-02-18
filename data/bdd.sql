@@ -52,14 +52,14 @@ CREATE TABLE alimentation
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     nom varchar(255)  NOT NULL,
     descriptionHabitat varchar(255) NOT NULL,
-    animaux varchar(255) NOT NULL FOREIGN KEY REFERENCES animaux(habitat) ON DELETE CASCADE,
+    animaux varchar(255),
     validate BINARY(1) DEFAULT 0 NOT NULL
 )ENGINE = InnoDB;
-
     CREATE TABLE animaux
 (
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     prenom varchar(255)  NOT NULL,
     race varchar(255) NOT NULL,
-    FOREIGN KEY (id) REFERENCES habitat(nom) ON DELETE CASCADE
+    habitat varchar(255) NOT NULL,
+    view int(255) NULL DEFAULT 0
     )ENGINE = InnoDB;

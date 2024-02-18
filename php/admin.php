@@ -32,7 +32,16 @@
     <a href="habitat.php">Page habitats</a><br>
     <h3>Compte rendu Vétérinaire</h3>
     <a href="admin_cr.php">Carnet de santé</a><br>
-
+    <h3>Animaux</h3>
+    <a href="ajout_animal.php">Ajouter un animal</a><br>
+    <a href="modif_animal.php">Modifier les animaux</a><br>
+    <a href="animal.php">Page animaux</a><br>
+    <h3>Dashbord</h3>
+    <a href="dashbord.php">Dashbord</a><br>
+    <h3>Les Horaires</h3>
+    <a href="ajout_horaire.php">Ajouter un horaire</a><br>
+    <a href="modif_horaire.php">Modifier les horaires</a><br>
+    <a href="horaire.php">Page horaires</a><br>
     <br>
     
   <!-- Admin 1 >>login= admin mdp= 789456-->
