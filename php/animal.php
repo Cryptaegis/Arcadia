@@ -19,86 +19,60 @@
 
   $query = "SELECT * FROM animaux";
   $result = mysqli_query($conn, $query);
-
   if ($result) {
     $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
   } else {
-    echo "Error: " . mysqli_error($conn) . $row;
+    echo "Error: " . mysqli_error($conn) . $row . $query;
   }
-  //si bouton view click envoyer on incremente de 1 la colonne view
+//incremente by 1 the view column of the animal onclick
   if (isset($_POST['view'])) {
     $view = $_POST['view'];
-    $query = "UPDATE animaux SET view = view + 1 WHERE view = '$view'";
-    $result = mysqli_query($conn, $query);
-    if ($result) {
-      //header('location: animal.php');
-      echo 'View incremented successfully';
+    $query2 = "UPDATE animaux SET view = view + 1 WHERE view = '$view'";
+    $story = mysqli_query($conn, $query2);
+    if ($story) {
+      echo "View incremented.";
+        }else {
+        echo "Error: Invalid". $query2;
+        }
+  }
 
-    } else {
-      echo "Error: " . mysqli_error($conn);
-    }
+  function displayButton()
+  {
+    echo '<form method="post" action="">';
+    echo '<button  type="submit" name="view" value="view"> dans la savane</button>';
+    echo '</form>';
   }
- // si le bouton animal détail est clické, envoyer vers la page qui correspond à l'animal selectionné
-  if (isset($_POST['animal'])) {
-    $animal = $_POST['race'];
-    if ($animal == 'Lion') {
-      header('location: Lion_sante.php');
-    } elseif
-    ($animal == 'zebre') {
-      header('location: zebre_sante.php');
-    } elseif
-    ($animal == 'girafe') {
-      header('location: girafe_sante.php');
-    } elseif
-    ($animal == 'Chimpanze') {
-      header('location: chimpanze_sante.php');
-    } elseif
-    ($animal == 'aigle') {
-      header('location: aigle_sante.php');
-    }
-  }
-  ?>
- 
-     
+?>
+
+
   <h1>Animaux</h1>
 
-  <!-- Display all animals -->
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <tr>
-        <th>Id</th>
-        <th>Prenom</th>
-        <th>Habitat</th>
-        <th>Race</th>
-        <th>View</th>
-      </tr>
-      <?php foreach ($row as $animal) : ?>
-        <tr>
-          <td><?php echo  $animal['id'] ?></td>
-          <td><?php echo $animal['prenom']; ?></td>
-          <td><?php echo $animal['habitat']; ?></td>
-          <td><?php echo $animal['race']; ?></td>
-          <td><?php echo $animal['view']; ?></td>
-          <td>
-            <form action="animal.php" method="post">
-              <input type="hidden" name="view" value="<?php echo $animal['view']; ?>">
-              <input type="submit" value="View">
-              <!--link qui envoie vers les détails de l'naimal-->
-              <a href="animal_detail.php?id=<?php echo $animal['id']; ?>">Details</a>
-          <!--si race = lion envoyer vers la page lion_sante.php-->
-              <input type="hidden" name="id" value="<?php echo $animal['id']; ?>"/>
-              <button type="button" onclick="showSanté(this)" class="btn btn-primary">Santé</button>
-            </form>
-          </td>
-        </tr>
-      <?php endforeach; ?>
-    </table>
+
+  <!-- Display all animals in bootstrap card -->
+  <div class="card-deck">
+    <?php foreach ($row as $animal) : ?>
+      <div class="card">
+        <!--<img src="img/<?php echo $animal['image']; ?>" class="card-img-top" alt="...">-->
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $animal['prenom']; ?></h5>
+          <p class="card-text"><?php echo $animal['race'];
+          // create a for boucle that search the word lion or girafe
+            if (strpos($animal['race'],'lion') !== false) {
+            
+            }elseif ( strpos($animal['race'],'girafe')!==false){
+            echo '<a href="Girafe_sante.php"> dans la savane</a>';
+            }else{echo 'Bientôt dans Arcadia';} ?></p>
+          <p class="card-text"><?php echo $animal['habitat']; ?></p>
+          <p class="card-text"><?php echo $animal['view']; ?></p>
+        </div>
+      </div>
+    <?php endforeach; ?>
   </div>
+ 
 
-
-  <?php if (empty($animal)): ?>
-        <p>No animals found.</p>
-    <?php endif; ?>
+  <?php if (empty($animal)) : ?>
+    <p>No animals found.</p>
+  <?php endif; ?>
 
   <button onclick="history.back()">Go Back</button>
   <a href="admin.php">Home</a>
