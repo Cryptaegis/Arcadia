@@ -63,3 +63,12 @@ CREATE TABLE alimentation
     habitat varchar(255) NOT NULL,
     view int(255) NULL DEFAULT 0
     )ENGINE = InnoDB;
+
+    CREATE TABLE horaire
+(
+    jour char(3) NOT NULL,
+    heureDebut time NOT NULL,
+    heureFin time NOT NULL,
+    service int NOT NULL,
+    FOREIGN KEY (service) REFERENCES services(id) ON DELETE CASCADE
+)ENGINE = InnoDB;
