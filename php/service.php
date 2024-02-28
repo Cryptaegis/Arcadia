@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services Arcadia</title>
 </head>
+
 <body>
+<?php include "_partial/header.php"; ?>
+    <?php include "_partial/navbar.php"; ?>    <!--Affichage de la liste des services-->
     <h1>Services Arcadia</h1>
     <h2>Services</h2>
     <p>Voici la liste des services que nous proposons:</p>
@@ -47,11 +50,7 @@
             );}
             ?>
 
-         
-    <h2>Modifier les services</h2>
-    <p>Vous pouvez modifier les services ci-dessus en cliquant sur le lien <a href="modif_service.php">"Modifier"</a>.
-    Oublie pas de retirer le lien pour que seul les admin puisse y accéder!<br/>
-</p>
+
 <!--links-->
 <br>
 <button onclick="history.back()">Go Back</button>
