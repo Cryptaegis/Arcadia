@@ -53,7 +53,7 @@
     if
     (isset($_POST['libelle']) && isset($_POST['descriptionService']) && isset($_POST['id'])){
         $libelle = $_POST['libelle'];
-        $descriptionService = $_POST['descriptionService'];
+        $descriptionService = htmlspecialchars($_POST['descriptionService'], ENT_QUOTES);
         $id = $_POST['id'];
         $sql = "UPDATE services SET libelle= '$libelle', descriptionService= '$descriptionService' WHERE id= '$id'";
         if(mysqli_query($conn, $sql)){

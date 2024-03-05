@@ -27,6 +27,8 @@ $habitats = mysqli_fetch_all($result, MYSQLI_ASSOC);
 echo "<h1>Habitat to validate OR DELETE</h1>\n";
 foreach ($habitats as $habitat){
     echo "<h2>{$habitat['nom']}</h2>\n";
+    //when description display all of the textarea
+    echo "<p><strong>Description : </strong></p>\n";
     echo "<p>{$habitat['descriptionHabitat']}</p>\n";
     echo "<p>{$habitat['animaux']}</p>\n";
     echo "<a href='modif_habitat.php?validate={$habitat['id']}'>Validate</a>\n";

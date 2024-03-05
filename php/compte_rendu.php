@@ -18,12 +18,12 @@
 
   // Check if form is submitted
   if (isset($_POST['submit'])) {
-      $animal = htmlspecialchars(strip_tags($_POST['animal']));
+      $animal = htmlspecialchars(strip_tags($_POST['animal'], ENT_QUOTES));
       $date = htmlspecialchars(strip_tags($_POST['date']));
       $time = htmlspecialchars(strip_tags($_POST['time']));
-      $observation = htmlspecialchars(strip_tags($_POST['observation']));
-      $etat = htmlspecialchars(strip_tags($_POST['etat']));
-      $amelioration = htmlspecialchars(strip_tags($_POST['amelioration']));
+      $observation = htmlspecialchars(strip_tags($_POST['observation'], ENT_QUOTES));
+      $etat = htmlspecialchars(strip_tags($_POST['etat'], ENT_QUOTES));
+      $amelioration = htmlspecialchars(strip_tags($_POST['amelioration'], ENT_QUOTES));
 
 
       // Insert data into database
@@ -103,18 +103,23 @@
   </div>
 
       <label for="date">Date:</label>
+      <br>
       <input class="box-input" type="date" id="date" name="date" required>
       <br>
       <label for="time">Heure:</label>
+      <br>
       <input type="time" id="time" name="time" min="07:00" max="18:00" required />
       <br>
       <label for="observation">Observation:</label>
+      <br>
       <textarea id="observation" name="observation" rows="4" cols="50" required></textarea>
       <br>
       <label for="etat">Etat:</label>
+      <br>
       <input class="box-input" type="text" id="etat" name="etat" required>
       <br>
       <label for="amelioration">Amélioration:</label>
+      <br>
       <textarea id="amelioration" name="amelioration" rows="4" cols="50" required></textarea>
       <br>
       <input type="submit" name="submit" value="Add Observation">

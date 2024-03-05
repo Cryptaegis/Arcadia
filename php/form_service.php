@@ -16,16 +16,13 @@
   
 
     if(isset($_POST["submit"])){
-        // Validate libelle
-        $libelle = htmlspecialchars(strip_tags($_POST['libelle']));
-        $descriptionService = htmlspecialchars(strip_tags($_POST['descriptionService']));
-
+        $descriptionService = htmlspecialchars($_POST['descriptionService'], ENT_QUOTES);
+        echo $descriptionService;
+        $libelle = $_POST['libelle'];
       
-            // Prepare an insert statement
             $sql = "INSERT into `services` (libelle, descriptionService) VALUES ('$libelle', '$descriptionService')";
 
             $stmt = mysqli_query($conn, $sql);
-            // Check if the query was executed
             if($stmt === false){
                 die("ERROR Could not execute: " . htmlspecialchars($sql) . "<br>" . mysqli_error($conn));
             } else{
@@ -33,16 +30,16 @@
             }
         }
     ?>
-    <form action="service.php" method="post">
+    <form action="" method="post">
         <div>
             <label for="libelle">Libellé</label>
             <input type="text" id="libelle" name="libelle" required>
         </div>
         <div>
-            <label for="descriptionService">Description</label>
-            <input type="text" id="descriptionService" name="descriptionService" required>
-        </div>
-        <div>
+            <!--textarea that does allow apostrophe? -->
+            <label for="descriptionService">Description du service</label>
+            <textarea style="height:250px; resize: none;" id="descriptionService" name="descriptionService" required></textarea>
+             <br>
             <input type="submit" name="submit" value="Ajouter">
         </div>
     </form>

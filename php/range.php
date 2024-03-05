@@ -1,6 +1,6 @@
 <?php
 $today = date('Y-m-d');
-$last_week_start = date('Y-m-d', strtotime('-1 week last monday'));
+$last_week_start = date('Y-m-d', strtotime('-10 week last monday'));
 $last_week_end = date('Y-m-d', strtotime('-1 week next sunday'));
 
 $this_week_start = date('Y-m-d', strtotime('last monday'));

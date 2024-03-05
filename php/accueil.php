@@ -19,24 +19,20 @@
 <body class='vitrine-accueil'>
     <?php include "_partial/header.php"; ?>
     <?php include "_partial/navbar.php"; ?>
-    <h1>Accueil</h1>
-    <p>Bienvenue a ARCADIA</p>
-    <p>Découvrons Arcadia!</p>
 
-    <!------------------------------ BLOC DU CONTENU --------------------------->
+    <!------------------------------ Presentation Arcadia --------------------------->
     <!-- Page Heading -->
-    <!-- Presentation Arcadia -->
 
     <br /><br />
     <div id="contenu">
-        <h1>Description : L'Arcadia</h1>
+        <h1>Le zoo Arcadia</h1>
 
         <div class="row">
             <div class="col-md-8">
-                <img class="img-responsive" src="../images/arcadia.jpg" alt="">
+                <img class="img-responsive-rec" src="../images/arcadia.jpg" alt="Forêt d'arcadia">
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-4 text-top">
                 <h3>L'Arcadia</h3>
                 <p>Le parc national de l'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
                 </a>
@@ -44,7 +40,7 @@
 
 
 
-            <table style="width:70%">
+            <table class="table-stair">
                 <tr>
                     <td>
                         <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle">
@@ -53,8 +49,9 @@
                         <p>L'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
                     </td>
                 </tr>
+                <tr>
                 <td>
-                    <p>L'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
+                    <p>Arcadia protège et conserve la nature qui habite au coeur de chacun d'entre vous qui pose le pieds dans chaque habitat c'est une immersion total.</p>
                 </td>
                 <td>
                     <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle">
@@ -66,10 +63,8 @@
                     </td>
                     <td>
                         <p>L'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
-                        <b>Nom scientifique :</b> <i>Animalia</i><br />
-                        <b>Famille :</b> <i>Chordata</i><br />
-                        <b>Genre :</b> <i>Mammalia</i><br />
-                        Le nom Arcadia provient du grec ancien et signifie "pays des bergers".<br />Ce mammifère est originaire d'Asie et d'Afrique. Il est utilisé pour le transport de marchandises et de personnes. Il est également utilisé pour la production de lait et de viande.
+                       
+                        <p>Le nom Arcadia provient du grec ancien et signifie "pays des bergers".<br/>Ce mammifère est originaire d'Asie et d'Afrique. Il est utilisé pour le transport de marchandises et de personnes. Il est également utilisé pour la production de lait et de viande.</p>
                     </td>
                 </tr>
             </table>
@@ -77,8 +72,8 @@
         <br /><br />
         <!------------------------------ BLOC DU CONTENU SERVICES--------------------------->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Description : Des Services </h1>
+            <div class="col-lg-12" >
+                <h1 class="page-header">Nos Services </h1>
             </div>
         </div>
         <!-- Wrapper for slides -->
@@ -93,7 +88,10 @@
             <!-- Slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="../images/restaurant.jpg" alt="Aigle">
+                    <a href="service.php">
+                    <img src="../images/restaurant.jpg" alt="service restauration">
+
+                    </a>
                     <div class="carousel-caption">
                         <h3>Restauration</h3>
                         <p>De quoi se retrouver en pleine et profiter de nos meilleur burgers</p>
@@ -101,14 +99,19 @@
                 </div>
 
                 <div class="item">
-                    <img src="../images/guide.jpg" alt="Aigle">
+                    <a  href="service.php">
+                    <img src="../images/guide.jpg" alt="service guide">
+                    </a>
                     <div class="carousel-caption">
                         <h3>Visitez leurs habitats!</h3>
                         <p>Vous serez accompagner par nos meilleur guides gratuitement!</p>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="../images/train.jpg" alt="Aigle">
+                    <a href="service.php">
+                    <img src="../images/train.jpg" alt="service train">
+
+                    </a>
                     <div class="carousel-caption">
                         <h3>Train</h3>
                         <p>Charle est notre gentils train qui vous permettras de tout voir dans le zoo sans bouger de votre siège.</p>
@@ -130,29 +133,20 @@
     <br />
     <br />
     <!--section Habitat-->
-
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Description : Des habitats </h1>
+        <hr>
+
+            <h2 class="page-header"><strong>Nos habitats :</strong></h2>
         </div>
     </div>
     <a href="#services"><i id="arrow" class="fa fa-arrow-right fa-2x"></i></a>
-    <hr>
     <!-- Introduction Text -->
     <div class="row">
-        <div class="col-lg-12">
-            <p>Le parc national de l'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
-            <p><strong>Nos habitats :</strong></p>
+        <div class="col-lg-12  text-center">
             <p>Ils sont situés dans un cadre naturel exceptionnel, au coeur de la forêt de Fontainebleau. Ils sont conçus pour offrir aux animaux un environnement proche de leur habitat naturel. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous
             <p>Ici, vous pourrez découvrir des animaux sauvages et domestiques. Vous aurez la possibilité de les observer dans leur habitat naturel. Vous pourrez également assister à des spectacles d'animaux.</p>
-            <div>
-                <ul style="list-style-type: none;">
-                    <li><strong>Les habitats :</strong></li>
-                    <li>Les habitats sont situés dans un cadre naturel exceptionnel, au coeur de la forêt de Fontainebleau. Ils sont conçus pour offrir aux animaux un environnement proche de leur habitat naturel.</li>
-                    <li>Vous pourrez y découvrir des animaux sauvages et domestiques. Vous aurez la possibilité de les observer dans leur habitat naturel. Vous pourrez également assister à des spectacles d'animaux.</li>
-                    <li>Des espaces de restauration sont également à votre disposition pour vous restaurer.</li>
-
-            </div>
+          
         </div>
     </div>
 
@@ -163,7 +157,7 @@
             </div>
             <div class="panel-footer text-center">
                 <img class="img-responsive" src="../images/savane.jpg" alt="">
-                <a href="habitat.php" class="btn btn-default">En savoir plus</a>
+                <a href="savane.php" class="btn btn-default">En savoir plus</a>
             </div>
         </div>
     </div>
@@ -175,7 +169,7 @@
             </div>
             <div class="panel-footer text-center">
                 <img class="img-responsive" src="../images/jungle.jpg" alt="">
-                <a href="habitat.php" class="btn btn-default">En savoir plus</a>
+                <a href="jungle.php" class="btn btn-default">En savoir plus</a>
             </div>
         </div>
     </div>
@@ -187,7 +181,7 @@
             </div>
             <div class="panel-footer text-center">
                 <img class="img-responsive" src="../images/marais.jpg" alt="">
-                <a href="habitat.php" class="btn btn-default">En savoir plus</a>
+                <a href="marais.php" class="btn btn-default">En savoir plus</a>
             </div>
         </div>
     </div>
@@ -199,14 +193,14 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Nos Animaux</h1>
+            <h2 class="page-header"><strong>Nos Animaux</strong></h2>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="card" onclick="location.href='animal.php';" style="width: 50rem; margin: auto;">
             <img src="../images/animaux.jpg" class="card-img-top" alt="les elephant de la savane" style="width: 50rem; margin: auto;">
-            <div class="card-body">
+            <div class="card-body animal-link">
                 <h5 class="card-title">Animaux</h5>
                 <p class="card-text">Venez rencontrer nos animaux qui sont soigné et protéger dans un milieux adapter à leur besoins.</p>
             </div>
@@ -238,17 +232,17 @@
             <p class="lead">Les avis et commentaires des visiteurs.</p>
         </div>
     </div>
-    <div class="row">
+    <div class="row" >
         <div class="col-lg-12">
             <h2 class="page-header" >Avis et Commentaires</h2>
         </div>
     </div>
     <br /><br />
-    <div class="row">
+    <div class="row row-comment" >
         <?php foreach ($row as $comment) : ?>
             <div class="container">
-                <div class="card-deck mb-3 text-center" style="display:flex; justify-content:space-around;">
-                    <div class="card" style="width: 18em; color: black; border: solid 4px grey; background-color: #CBE5EB; margin: 5px; border-radius: 30px; ">
+                <div class="card-deck mb-3 text-center">
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $comment['username']; ?></h5>
                             <p class="card-text"><?php echo nl2br(htmlspecialchars($comment['comment'])); ?></p>

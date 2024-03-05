@@ -4,7 +4,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+<?php include "_partial/header.php"; ?>
+    <?php include "_partial/navbar.php"; ?>
 <?php
 require('connexion.php');
 session_start();
@@ -37,7 +38,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 ?>
 <form class="box" action="" method="post" name="login">
 <h1 class="box-logo box-title">
-  <a href="https://waytolearnx.com/">WayToLearnX.com</a>
+  
 </h1>
 <h1 class="box-title">Connexion</h1>
 <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">

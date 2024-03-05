@@ -41,7 +41,7 @@
       <label for="habitat">Habitat:</label>
       <input class="box-input" type="text" id="habitat" name="habitat" required>
       <br>
-      <input type="submit" name="submit" value="Add Habitat">
+      <input type="submit" name="submit" value="Ajout animal">
 
     </form>
     <button onclick="history.back()">Go Back</button><br>

@@ -17,7 +17,7 @@
     }
     if(isset($_POST['submit'])){
         $nom = $_POST['nom'];
-        $descriptionHabitat = $_POST['descriptionHabitat'] ; 
+        $descriptionHabitat = htmlspecialchars($_POST['descriptionHabitat'], ENT_QUOTES);
         $animaux = $_POST['animaux'];
         //insert into the database
             $sql = "INSERT INTO `habitat`( nom, descriptionHabitat, animaux) values( '$nom', '$descriptionHabitat', ' $animaux')";
@@ -35,13 +35,16 @@
       <br>
      
       <label for="descriptionHabitat">Description Habitat:</label>
-      <textarea id="descriptionHabitat" name="descriptionHabitat" rows="4" cols="50" required></textarea>
+        <br>
+      <textarea id="descriptionHabitat" name="descriptionHabitat"   rows="10" cols="100"  minlength="10" maxlength="10000" wrap="soft" required></textarea>
       <br>
    
       <label for="animaux">Animaux autorisés :</label>
+        <br>
       <textarea id="animaux" name="animaux" rows="4" cols="50" required></textarea>
       <br>
-      <input type="submit" name="submit" value="Add Habitat">
+     
+      <input type="submit" name="submit" value="Ajout Animal">
 
     </form>
     <button onclick="history.back()">Go Back</button><br>

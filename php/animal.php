@@ -59,6 +59,20 @@
                         <a id="savane" href="Lion_sante.php" onclick="<?php updateView($animal['id'])?>">dans la savane</a>
                     <?php elseif (strpos($animal['race'], 'girafe') !== false) : ?>
                         <a id ="savane" href="girafe_sante.php" onclick="<?php updateView($animal['id'])?>">dans la savane</a>
+                    <?php elseif (strpos($animal['race'], 'zèbre') !== false) : ?>
+                        <a id="savane" href="zebre_sante.php" onclick="<?php updateView($animal['id'])?>">dans la savane</a>
+                    <?php elseif (strpos($animal['race'], 'chimpanze') !== false) : ?>
+                        <a id="foret" href="chimpanze_sante.php" onclick="<?php updateView($animal['id'])?>">dans la Jungle</a>
+                    <?php elseif (strpos($animal['race'], 'aigle') !== false) : ?>
+                        <a id="montagne" href="aigle_sante.php" onclick="<?php updateView($animal['id'])?>">dans la Jungle</a>
+                    <?php elseif (strpos($animal['race'], 'jaguar') !== false) : ?>
+                        <a id="foret" href="jaguar_sante.php" onclick="<?php updateView($animal['id'])?>">dans la Jungle</a>
+                    <?php elseif (strpos($animal['race'], 'cigogne') !== false) : ?>
+                        <a id="marais" href="cigogne_sante.php" onclick="<?php updateView($animal['id'])?>">dans le marais</a>
+                    <?php elseif (strpos($animal['race'], 'canard') !== false) : ?>
+                        <a id="marais" href="canard_sante.php" onclick="<?php updateView($animal['id'])?>">dans le marais</a>
+                    <?php elseif (strpos($animal['race'], 'loutre') !== false) : ?>
+                        <a id="riviere" href="loutre_sante.php" onclick="<?php updateView($animal['id'])?>">dans le marais</a>
                     <?php else : ?>
                         Bientôt dans Arcadia
                     <?php endif; ?>

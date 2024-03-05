@@ -1,6 +1,60 @@
-
+h1{
+    margin:10%;
+}
+img {
+    width: 100%;
+    height: auto;
+}
 .vitrine-accueil{
     background-color: #1D4632;
     text-align: center;
     color: white;
 }
+/*presentation Arcadia*/
+.table-stair{
+    width: 60%;
+    margin: 0 auto;
+}
+.img-responsive-rec{
+width:50%;
+border-radius: 30%;
+}
+.img-circle{
+    margin:4em;
+}
+.text-top{
+    position: relative;
+    right:10%;
+    text-align: center;
+}
+/*section habitat*/
+.text-center{
+    text-align: center;
+    width:50%;
+    margin: 3% 25%;
+
+}
+/*Avis accueil*/
+.row-comment{
+    display: flex;
+   
+}
+
+/*section Animaux*/
+/*mettre le titre au milieux de l'image de manière responsive*/
+.animal-link{
+    position:absolute;
+    margin: -8em -2em ; /*On place le texte à la moitié de l'image*/
+    font-size: 2em;
+    padding: 3%;
+    width: 40%;
+}
+
+@media screen and (max-width: 900px) {
+    .animal-link{
+        font-size: 1rem;
+      
+    }
+}
+
+
