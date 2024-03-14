@@ -14,12 +14,11 @@
     // Attempt to connect to the database
     require("connexion.php");
   
-
+  
     if(isset($_POST["submit"])){
         $descriptionService = htmlspecialchars($_POST['descriptionService'], ENT_QUOTES);
         echo $descriptionService;
-        $libelle = $_POST['libelle'];
-      
+        $libelle = htmlspecialchars($_POST['libelle'], ENT_QUOTES);      
             $sql = "INSERT into `services` (libelle, descriptionService) VALUES ('$libelle', '$descriptionService')";
 
             $stmt = mysqli_query($conn, $sql);

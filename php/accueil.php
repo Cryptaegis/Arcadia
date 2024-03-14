@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Accueil</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -46,7 +46,7 @@
                         <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle">
                     </td>
                     <td>
-                        <p>L'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
+                        <p class="middle-text">L'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
                     </td>
                 </tr>
                 <tr>
@@ -54,16 +54,14 @@
                     <p>Arcadia protège et conserve la nature qui habite au coeur de chacun d'entre vous qui pose le pieds dans chaque habitat c'est une immersion total.</p>
                 </td>
                 <td>
-                    <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle">
+                    <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle circ">
                 </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="../images/arcadia2.jpg" alt="arcadia" class="img-circle">
                     </td>
-                    <td>
-                        <p>L'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
-                       
+                    <td class='bottom-text'>                       
                         <p>Le nom Arcadia provient du grec ancien et signifie "pays des bergers".<br/>Ce mammifère est originaire d'Asie et d'Afrique. Il est utilisé pour le transport de marchandises et de personnes. Il est également utilisé pour la production de lait et de viande.</p>
                     </td>
                 </tr>
@@ -144,7 +142,6 @@
     <!-- Introduction Text -->
     <div class="row">
         <div class="col-lg-12  text-center">
-            <p>Ils sont situés dans un cadre naturel exceptionnel, au coeur de la forêt de Fontainebleau. Ils sont conçus pour offrir aux animaux un environnement proche de leur habitat naturel. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous
             <p>Ici, vous pourrez découvrir des animaux sauvages et domestiques. Vous aurez la possibilité de les observer dans leur habitat naturel. Vous pourrez également assister à des spectacles d'animaux.</p>
           
         </div>
@@ -228,8 +225,9 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Avis et Commentaires</h1>
-            <p class="lead">Les avis et commentaires des visiteurs.</p>
+            <h2 class="display-4">Pour nous permettre de connaitre votre avis sur notre Zoo.</h2>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="comment.php" role="button">Laisser un avis</a></p>
         </div>
     </div>
     <div class="row" >
@@ -243,10 +241,10 @@
             <div class="container">
                 <div class="card-deck mb-3 text-center">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $comment['username']; ?></h5>
-                            <p class="card-text"><?php echo nl2br(htmlspecialchars($comment['comment'])); ?></p>
-                            <hr />
+                        <div class="card-body-avis">
+                            <h5 class="card-title"> De <?php echo $comment['username']; ?></h5>
+                            <p class="card-text">"<?php echo nl2br(htmlspecialchars($comment['comment'])); ?>"</p>
+                            <hr/>
                             <p class="card-text">Accompagner de <?php echo $comment['accompagnant']; ?></p>
                             <p class="card-text">Note: <?php echo $comment['visitRating']; ?>/5</p><br />
                         </div>

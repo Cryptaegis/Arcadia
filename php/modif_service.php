@@ -52,7 +52,8 @@
     //Modification des données
     if
     (isset($_POST['libelle']) && isset($_POST['descriptionService']) && isset($_POST['id'])){
-        $libelle = $_POST['libelle'];
+        $libelle = htmlspecialchars($_POST['libelle'], ENT_QUOTES);
+
         $descriptionService = htmlspecialchars($_POST['descriptionService'], ENT_QUOTES);
         $id = $_POST['id'];
         $sql = "UPDATE services SET libelle= '$libelle', descriptionService= '$descriptionService' WHERE id= '$id'";
