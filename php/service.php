@@ -17,6 +17,8 @@
 </head>
 
 <body class='vitrine-accueil'>
+<?php include "_partial/header.php"; ?>
+    <?php include "_partial/navbar.php"; ?>
   
      <!--Affichage de la liste des services-->
     <h1>Services Arcadia</h1>

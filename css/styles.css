@@ -117,3 +117,52 @@ text-align: center;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
 }
+/*PAGE Habitat*/
+@media screen and (max-width: 700px) {
+    .description-habitat{
+        width: 90%;
+    }
+
+}
+.description-habitat{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.list-group{
+    width: 15%;
+    color: #040404;
+    margin: 0 auto;
+}
+#savane, #marais, #jungle{
+    text-align: center;
+}
+.card_habitat{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: solid #1D4632 10px;
+    color: #FFFFFF;
+
+}
+.card_habitat:hover{
+    border-radius: 10px;
+    border: #030303 solid 1px;
+    color: #040404;
+}
+
+/*link sans decoration*/
+
+.btn_habitat{
+    margin: 0 auto;
+    padding: 2%;
+    text-decoration: none;
+    border-radius: 50% 20% / 10% 40%;
+    border:#9A7412 solid 1px;
+    color:#9A7412;
+}
+.btn_habitat:hover{
+    color:#FFFFFF;
+    background-color:#9A7412;
+    text-decoration:none;
+}
