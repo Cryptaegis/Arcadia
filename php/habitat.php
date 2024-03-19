@@ -7,18 +7,15 @@
     <title>Habitat</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
 
 <body class='vitrine-accueil'>
     <?php include "_partial/header.php"; ?>
+    <br>
     <?php include "_partial/navbar.php"; ?>
+    <br>
 
     <h1>Habitat</h1>
     <?php
@@ -69,11 +66,13 @@
 
     <?php endforeach; ?>
 
-<br>
-
+    <?php include "_partial/footer.php"; ?>
     <button onclick="history.back()">Go Back</button>
     <br>
-
+   <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

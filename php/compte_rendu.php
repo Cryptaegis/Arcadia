@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add Observation</title>
-  </head>
-  <body>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+</head>
+  <body class=" ac-admin titre-admin">
  <?php
   // Start the session
   session_start();
@@ -81,8 +87,8 @@
 
     <!--form that will send you to a page if lion is selected-->
 
-    <form action="" method="post">
-      <h2>Add Observation</h2>
+    <form action="" method="post" class="border-form style-form">
+      <h2>Observation Vétérinaire</h2>
       <br>
       <!--add option animal-->
       <label for="animal">Animal:</label>
@@ -122,13 +128,15 @@
       <br>
       <textarea id="amelioration" name="amelioration" rows="4" cols="50" required></textarea>
       <br>
-      <input type="submit" name="submit" value="Add Observation">
+      <input type="submit" name="submit" value="Add Observation" class="form-btn">
     </form>
+    <?php include "_partial/navbar-veto.php"; ?>
 
-    <a href="carnet_sante.php">Carnet de santé</a>
-    <a href="logout.php">Déconnexion</a>
-    <a href="ac-vet.php">HOME</a>
     </ul>
     </div>
+       <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </body>
 </html>

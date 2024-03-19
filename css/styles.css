@@ -166,3 +166,50 @@ text-align: center;
     background-color:#9A7412;
     text-decoration:none;
 }
+
+
+
+/*PAGE Administration*/
+.ac-admin{
+    background-color: #0A2535;
+}
+.titre-admin{
+    color: #FFFFFF;
+    text-align: center;
+}
+/*carnet de sante*/
+
+.card-sante{
+    margin: 0 auto;
+    width: 50%;
+}
+
+/*rendu formulaire style*/
+.border-form{
+    border: #1D4632 solid 1px;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 0 auto;
+    width: 50%;
+    background-color: #CBE5EB;
+}
+.form-btn{
+    color:rgb(253, 250, 250);
+    background-color: #000000;
+    border: #1D4632 solid 1px;
+text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 2%;
+}
+.form-btn:hover{
+    text-decoration: none;
+    color: #1D4632;
+    background-color:#fff;
+
+}
+
+.style-form{
+    color: #040404;
+}

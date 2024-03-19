@@ -7,19 +7,15 @@
     <title>Accueil</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
 
 <body class='vitrine-accueil'>
     <?php include "_partial/header.php"; ?>
+    <br>
     <?php include "_partial/navbar.php"; ?>
-
+    <br>
     <!------------------------------ Presentation Arcadia --------------------------->
     <!-- Page Heading -->
 
@@ -50,19 +46,19 @@
                     </td>
                 </tr>
                 <tr>
-                <td>
-                    <p>Arcadia protège et conserve la nature qui habite au coeur de chacun d'entre vous qui pose le pieds dans chaque habitat c'est une immersion total.</p>
-                </td>
-                <td>
-                    <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle circ">
-                </td>
+                    <td>
+                        <p>Arcadia protège et conserve la nature qui habite au coeur de chacun d'entre vous qui pose le pieds dans chaque habitat c'est une immersion total.</p>
+                    </td>
+                    <td>
+                        <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle circ">
+                    </td>
                 </tr>
                 <tr>
                     <td>
                         <img src="../images/arcadia2.jpg" alt="arcadia" class="img-circle">
                     </td>
-                    <td class='bottom-text'>                       
-                        <p>Le nom Arcadia provient du grec ancien et signifie "pays des bergers".<br/>Ce mammifère est originaire d'Asie et d'Afrique. Il est utilisé pour le transport de marchandises et de personnes. Il est également utilisé pour la production de lait et de viande.</p>
+                    <td class='bottom-text'>
+                        <p>Le nom Arcadia provient du grec ancien et signifie "pays des bergers".<br />Ce mammifère est originaire d'Asie et d'Afrique. Il est utilisé pour le transport de marchandises et de personnes. Il est également utilisé pour la production de lait et de viande.</p>
                     </td>
                 </tr>
             </table>
@@ -70,7 +66,7 @@
         <br /><br />
         <!------------------------------ BLOC DU CONTENU SERVICES--------------------------->
         <div class="row">
-            <div class="col-lg-12" >
+            <div class="col-lg-12">
                 <h1 class="page-header">Nos Services </h1>
             </div>
         </div>
@@ -87,7 +83,7 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <a href="service.php">
-                    <img src="../images/restaurant.jpg" alt="service restauration">
+                        <img src="../images/restaurant.jpg" alt="service restauration">
 
                     </a>
                     <div class="carousel-caption">
@@ -97,8 +93,8 @@
                 </div>
 
                 <div class="item">
-                    <a  href="service.php">
-                    <img src="../images/guide.jpg" alt="service guide">
+                    <a href="service.php">
+                        <img src="../images/guide.jpg" alt="service guide">
                     </a>
                     <div class="carousel-caption">
                         <h3>Visitez leurs habitats!</h3>
@@ -107,7 +103,7 @@
                 </div>
                 <div class="item">
                     <a href="service.php">
-                    <img src="../images/train.jpg" alt="service train">
+                        <img src="../images/train.jpg" alt="service train">
 
                     </a>
                     <div class="carousel-caption">
@@ -133,7 +129,7 @@
     <!--section Habitat-->
     <div class="row">
         <div class="col-lg-12">
-        <hr>
+            <hr>
 
             <h2 class="page-header"><strong>Nos habitats :</strong></h2>
         </div>
@@ -143,7 +139,7 @@
     <div class="row">
         <div class="col-lg-12  text-center">
             <p>Ici, vous pourrez découvrir des animaux sauvages et domestiques. Vous aurez la possibilité de les observer dans leur habitat naturel. Vous pourrez également assister à des spectacles d'animaux.</p>
-          
+
         </div>
     </div>
 
@@ -217,7 +213,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    // display only the validate comments
+    //only the validate comments
     $query = "SELECT * FROM comments WHERE validate = 1 ORDER BY id DESC";
     $result = mysqli_query($conn, $query);
     $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -227,16 +223,17 @@
         <div class="container">
             <h2 class="display-4">Pour nous permettre de connaitre votre avis sur notre Zoo.</h2>
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="comment.php" role="button">Laisser un avis</a></p>
+                <a class="btn btn-primary btn-lg" href="comment.php" role="button">Laisser un avis</a>
+            </p>
         </div>
     </div>
-    <div class="row" >
+    <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header" >Avis et Commentaires</h2>
+            <h2 class="page-header">Avis et Commentaires</h2>
         </div>
     </div>
     <br /><br />
-    <div class="row row-comment" >
+    <div class="row row-comment">
         <?php foreach ($row as $comment) : ?>
             <div class="container">
                 <div class="card-deck mb-3 text-center">
@@ -244,7 +241,7 @@
                         <div class="card-body-avis">
                             <h5 class="card-title"> De <?php echo $comment['username']; ?></h5>
                             <p class="card-text">"<?php echo nl2br(htmlspecialchars($comment['comment'])); ?>"</p>
-                            <hr/>
+                            <hr />
                             <p class="card-text">Accompagner de <?php echo $comment['accompagnant']; ?></p>
                             <p class="card-text">Note: <?php echo $comment['visitRating']; ?>/5</p><br />
                         </div>
@@ -252,14 +249,13 @@
                 </div>
             </div>
         <?php endforeach; ?>
-    </div>    <!--End of responsive cards for each comment-->
-    <br /><br />
-<!-- jQuery -->
-<script src="/js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
-
+    </div>
+         
+    <?php include "_partial/footer.php"; ?>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
