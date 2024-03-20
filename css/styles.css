@@ -1,215 +1,229 @@
-h1{
-    margin:10%;
+h1 {
+  margin: 10%;
 }
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-.vitrine-accueil{
-    background-color: #1D4632;
-    text-align: center;
-    color: white;
+.logo-arcadia {
+  width: 15%;
+  height: auto;
+  background-size: contain;
+  border-radius: 30%;
+}
+.background {
+  width: 10%;
+  height: 100%;
+  padding: 2%;
+  background: linear-gradient(to bottom right, #cbe5eb, #6dcff6);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5),
+    -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
+}
+.vitrine-accueil {
+  background-color: #1d4632;
+  text-align: center;
+  color: white;
 }
 /*presentation Arcadia*/
-.table-stair{
-    width: 60%;
-    margin: 0 auto;
+.table-stair {
+  width: 60%;
+  margin: 0 auto;
 }
-.img-responsive-rec{
-width:50%;
-border-radius: 30%;
+.img-responsive-rec {
+  width: 50%;
+  border-radius: 30%;
 }
-.img-circle{
-    margin:4em;
+.img-circle {
+  margin: 4em;
 }
-.circ{
-    width: 70%;
+.circ {
+  width: 70%;
 }
 .tex-top,
 .middle-text,
-.bottom-text{
-position:relative;
-text-align: center;
+.bottom-text {
+  position: relative;
+  text-align: center;
 }
-.text-top{
-    right:10%;
+.text-top {
+  right: 10%;
 }
-.middle-text{
-    left: 30%;
+.middle-text {
+  left: 30%;
 }
-.bottom-text{
-    left: 20%;
+.bottom-text {
+  left: 20%;
 }
 /*section habitat*/
-.text-center{
-    text-align: center;
-    width:50%;
-    margin: 3% 25%;
-
+.text-center {
+  text-align: center;
+  width: 50%;
+  margin: 3% 25%;
 }
 /*Avis accueil*/
 
-.jumbotron-fluid{
-    background-color: #CBE5EB;
-    color: #040404;
-    text-align: center;
-    padding: 5%;
-
+.jumbotron-fluid {
+  background-color: #cbe5eb;
+  color: #040404;
+  text-align: center;
+  padding: 5%;
 }
-.row-comment{
-    display: flex;  
-    color: black;
+.row-comment {
+  display: flex;
+  color: black;
 }
-.card-body-avis{
-    border-radius: 10px;
-    height: 20vh;
-    width: 30vh;
-    background-color: #CBE5EB;
-    color: #040404;
+.card-body-avis {
+  border-radius: 10px;
+  height: 20vh;
+  width: 30vh;
+  background-color: #cbe5eb;
+  color: #040404;
 }
 
 /*section Animaux*/
-.animal-link{
-    position:absolute;
-    margin: -8em -2em ; 
-    font-size: 2em;
-    padding: 3%;
-    width: 40%;
+.animal-link {
+  position: absolute;
+  margin: -8em -2em;
+  font-size: 2em;
+  padding: 3%;
+  width: 40%;
 }
 
 @media screen and (max-width: 700px) {
-    .animal-link{
-        font-size: 2rem;
-        width: 70%;
-        left: 7em; 
-        margin-top: -13em;      
-    }
+  .animal-link {
+    font-size: 2rem;
+    width: 70%;
+    left: 7em;
+    margin-top: -13em;
+  }
 }
 
 /*Pages avis*/
 /*formulaire Avis*/
-.form-comment{
-    color:#040404;
+.form-comment {
+  color: #040404;
 }
 
 /*PAGE SERVICE*/
 
 .service1 {
-    width: 50%; 
-    max-width: 100%;
-    height: auto;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 .service2 {
-    float: right;
-    width: 50%;
-    max-width: 100%;
-    height: auto;
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 50%;
+  float: right;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 .service3 {
-    float: left;
-    width: 50%;
-    max-width: 100%;
-    height: auto;
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 50%;
+  float: left;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 /*PAGE Habitat*/
 @media screen and (max-width: 700px) {
-    .description-habitat{
-        width: 90%;
-    }
+  .description-habitat {
+    width: 90%;
+  }
+}
+.description-habitat {
+  width: 60%;
+  margin: 0 auto;
+}
 
+.list-group {
+  width: 15%;
+  color: #040404;
+  margin: 0 auto;
 }
-.description-habitat{
-    width: 60%;
-    margin: 0 auto;
+#savane,
+#marais,
+#jungle {
+  text-align: center;
 }
-
-.list-group{
-    width: 15%;
-    color: #040404;
-    margin: 0 auto;
+.card_habitat {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: solid #1d4632 10px;
+  color: #ffffff;
 }
-#savane, #marais, #jungle{
-    text-align: center;
-}
-.card_habitat{
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border-radius: solid #1D4632 10px;
-    color: #FFFFFF;
-
-}
-.card_habitat:hover{
-    border-radius: 10px;
-    border: #030303 solid 1px;
-    color: #040404;
+.card_habitat:hover {
+  border-radius: 10px;
+  border: #030303 solid 1px;
+  color: #040404;
 }
 
 /*link sans decoration*/
 
-.btn_habitat{
-    margin: 0 auto;
-    padding: 2%;
-    text-decoration: none;
-    border-radius: 50% 20% / 10% 40%;
-    border:#9A7412 solid 1px;
-    color:#9A7412;
+.btn_habitat {
+  margin: 0 auto;
+  padding: 2%;
+  text-decoration: none;
+  border-radius: 50% 20% / 10% 40%;
+  border: #9a7412 solid 1px;
+  color: #9a7412;
 }
-.btn_habitat:hover{
-    color:#FFFFFF;
-    background-color:#9A7412;
-    text-decoration:none;
+.btn_habitat:hover {
+  color: #ffffff;
+  background-color: #9a7412;
+  text-decoration: none;
 }
-
-
 
 /*PAGE Administration*/
-.ac-admin{
-    background-color: #0A2535;
+.ac-admin {
+  background-color: #0a2535;
 }
-.titre-admin{
-    color: #FFFFFF;
-    text-align: center;
+.titre-admin {
+  color: #ffffff;
+  text-align: center;
 }
 /*carnet de sante*/
 
-.card-sante{
-    margin: 0 auto;
-    width: 50%;
+.card-sante {
+  margin: 0 auto;
+  width: 50%;
 }
 
 /*rendu formulaire style*/
-.border-form{
-    border: #1D4632 solid 1px;
-    border-radius: 10px;
-    padding: 2%;
-    margin: 0 auto;
-    width: 50%;
-    background-color: #CBE5EB;
+.border-form {
+  border: #1d4632 solid 1px;
+  border-radius: 10px;
+  padding: 2%;
+  margin: 0 auto;
+  width: 50%;
+  background-color: #cbe5eb;
 }
-.form-btn{
-    color:rgb(253, 250, 250);
-    background-color: #000000;
-    border: #1D4632 solid 1px;
-text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    display: inline-block;
-    padding: 2%;
+.form-btn {
+  color: rgb(253, 250, 250);
+  background-color: #000000;
+  border: #1d4632 solid 1px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 2%;
 }
-.form-btn:hover{
-    text-decoration: none;
-    color: #1D4632;
-    background-color:#fff;
+.form-btn:hover {
+  text-decoration: none;
+  color: #1d4632;
+  background-color: #fff;
+}
 
+.style-form {
+  color: #040404;
 }
-
-.style-form{
-    color: #040404;
+/*PAGE Admin*/
+.nav-pills {
+  margin: 0 auto;
+  width: 30%;
 }
