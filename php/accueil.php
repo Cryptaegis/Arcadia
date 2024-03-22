@@ -190,7 +190,7 @@
         </div>
     </div>
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="card" onclick="location.href='animal.php';" style="width: 50rem; margin: auto;">
             <img src="../images/animaux.jpg" class="card-img-top" alt="les elephant de la savane" style="width: 50rem; margin: auto;">
             <div class="card-body animal-link">
@@ -231,7 +231,7 @@
         <div class="col-lg-12">
             <h2 class="page-header">Avis et Commentaires</h2>
         </div>
-    </div>
+    </div>  
     <br /><br />
     <div class="row row-comment">
         <?php foreach ($row as $comment) : ?>
@@ -250,8 +250,9 @@
             </div>
         <?php endforeach; ?>
     </div>
-         
+         <br>
     <?php include "_partial/footer.php"; ?>
+    <br>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->

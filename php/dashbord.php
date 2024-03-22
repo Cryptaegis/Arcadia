@@ -5,9 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animaux</title>
+       <!-- Latest compiled and minified CSS -->
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
 
-<body>
+<body  class="ac-admin titre-admin">
+<a href="admin.php">
+      <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+    </a>
+    <br>
+    <br>
+    <h1>Nombre de vue par animaux</h1>
   <?php
 
   session_start();
@@ -36,7 +46,7 @@
   ?>
 
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  <div id="chartContainer" style="height: 370px; width: 50%;"></div>
+  <div id="chartContainer" style="height: 370px; width: 50%; margin:0 auto;"></div>
   <script type="text/javascript">
     window.onload = function() {
       var chart = new CanvasJS.Chart("chartContainer", {
@@ -87,10 +97,17 @@
 
   
 </body>
+<br>
+    <br>
 
-
+    <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="dashbord.php">Dashbord</a></li>
+        </ol>
+    </nav>
+<br>
   <button onclick="history.back()">Go Back</button>
-  <a href="admin.php">Home</a>
 
 </body>
 

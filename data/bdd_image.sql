@@ -3,10 +3,15 @@
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     image BLOB NOT NULL,
 
-)ENGINE = InnoDB;
-  CREATE TABLE animaux
-(
-    id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    image BLOB NOT NULL,
 
 )ENGINE = InnoDB;
+
+ 
+
+CREATE TABLE `img` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+     `nom` VARCHAR(100) NOT NULL,
+      `taille` INT NOT NULL,
+       `type` VARCHAR(20) NOT NULL,
+        `bin` LONGBLOB NOT NULL, PRIMARY KEY (`id`)
+) ENGINE = InnoDB;

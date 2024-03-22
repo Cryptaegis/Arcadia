@@ -48,12 +48,14 @@ if (!isset($_SESSION["username"])) {
     <li><a href="modif_habitat.php">Modifier les habitats</a></li>
     <li><a href="habitat.php">Page habitats</a></li>
   </ul>
+  <hr>
   <br>
   <h3>Compte rendu Vétérinaire</h3>
   <br>
   <ul class="nav nav-pills">
     <li><a href="admin_cr.php">Carnet de santé</a></li>
   </ul>
+  <hr>
   <br>
   <h3>Animaux</h3>
   <br>
@@ -62,6 +64,7 @@ if (!isset($_SESSION["username"])) {
     <li><a href="modif_animal.php">Modifier les animaux</a></li>
     <li><a href="animal.php">Page animaux</a></li>
   </ul>
+  <hr>
   <br>
   <h3>Dashbord</h3>
   <br>
@@ -77,7 +80,12 @@ if (!isset($_SESSION["username"])) {
     <li><a href="horaire.php">Page horaires</a></li>
   </ul>
   <br>
-
+  <h3>Les Images</h3>
+  <br>
+  <ul class="nav nav-pills">
+    <li><a href="img.php">Ajouter une image</a></li>
+  </ul>
+  <br>
   <!--danger zone bootstrap-->
   <h3>Zone de danger</h3>
   <div class="alert alert-warning">

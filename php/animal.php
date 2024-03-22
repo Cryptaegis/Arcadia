@@ -5,9 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animaux</title>
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
 
-<body>
+<body class='vitrine-accueil'>
+<?php include "_partial/header.php"; ?>
+    <br>
+    <?php include "_partial/navbar.php"; ?>
+    <br>
   <?php
   session_start();
   require('connexion.php');
@@ -48,13 +56,13 @@
   <h1>Animaux</h1>
 
 
-  <div class="card-deck">
     <?php foreach ($row as $animal) : ?>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title"><?php echo $animal['id']; ?></h5>
-                <h5 class="card-title"><?php echo $animal['prenom']; ?></h5>
-                <p class="card-text"><?php echo $animal['race']; ?>
+      <div class="card" style="width:100%; margin:auto 0;">
+        <img src="export.php?id=3" class="card-img-top" alt="identity picture animal">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $animal['prenom']; ?></h5>
+    <p class="card-text"><?php echo $animal['habitat']; ?></p>
+    <a href="#" class="btn btn-primary"><?php echo $animal['race']; ?>
                     <?php if (strpos($animal['race'], 'lion') !== false) : ?>
                         <a id="savane" href="Lion_sante.php" onclick="<?php updateView($animal['id'])?>">dans la savane</a>
                     <?php elseif (strpos($animal['race'], 'girafe') !== false) : ?>
@@ -76,10 +84,10 @@
                     <?php else : ?>
                         Bientôt dans Arcadia
                     <?php endif; ?>
-                </p>
-                <p class="card-text"><?php echo $animal['habitat']; ?></p>
-            </div>
-        </div>
+                  </a>
+  </div>
+</div>
+          
     <?php endforeach; ?>
 </div>
 
@@ -92,9 +100,15 @@
     <p>No animals found.</p>
   <?php endif; ?>
 
-  <button onclick="history.back()">Go Back</button>
-  <a href="admin.php">Home</a>
+  <br>
+    <?php include "_partial/footer.php"; ?>
+    <br>
+    <button onclick="history.back()">Go Back</button>
 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

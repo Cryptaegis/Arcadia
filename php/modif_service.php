@@ -97,8 +97,8 @@
    <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="form_service.php">Ajout services</a></li>
-        <li class="breadcrumb-item"><a href="modif_service.php">Modifier services</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="modif_service.php">Modifier services</a></li>
+        <li class="breadcrumb-item"><a href="form_service.php">Ajout services</a></li>
         <li class="breadcrumb-item"><a href="service.php">Page service</a></li>
       </ol>
     </nav>

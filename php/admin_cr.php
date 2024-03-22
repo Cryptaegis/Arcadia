@@ -1,7 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compte rendu vétérinaire</title>
+      <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+</head>
+<body class="ac-admin titre-admin">
+    
+<a href="admin.php">
+        <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+    </a>
+<br>
+<br>
 <?php
 require('connexion.php');
 require ('range.php');
-require ('_partial/header.php');
 
 $query = "SELECT * FROM observation";
   $resultat = mysqli_query($conn,$query);
@@ -29,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 
 
-<form action="" method="get">
+<form action="" method="get" class="border-form ">
     <label for="animal">Animal:</label>
     <select name="animal" id="animal">
         <option value="">Tous</option>
@@ -48,11 +65,18 @@ if (mysqli_num_rows($result) > 0) {
 
     <button type="submit">Filtrer</button>    
 </form>
-<a href="logout.php">Déconnexion</a>
+<br>
+    <br>
 
-<?php
-require('_partial/footer.php');
-?>
+    <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="admin_cr.php">Carnet de santé</a></li>
+        </ol>
+    </nav>
+    <br>
+
+
 
 </body>
 </html>

@@ -1,13 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Habitat modification</title>
+         <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
 
-<body>
+<body class="ac-admin titre-admin">
+<a href="admin.php">
+        <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+    </a>
     <?php
     // Attempt to connect to the database
     require("connexion.php");
@@ -26,13 +33,15 @@ $habitats = mysqli_fetch_all($result, MYSQLI_ASSOC);
 //ajouter un bouton validate ET delete
 echo "<h1>Habitat to validate OR DELETE</h1>\n";
 foreach ($habitats as $habitat){
+    echo "<div  class='border-form style-form'>\n";
     echo "<h2>{$habitat['nom']}</h2>\n";
     //when description display all of the textarea
     echo "<p><strong>Description : </strong></p>\n";
     echo "<p>{$habitat['descriptionHabitat']}</p>\n";
     echo "<p>{$habitat['animaux']}</p>\n";
-    echo "<a href='modif_habitat.php?validate={$habitat['id']}'>Validate</a>\n";
-    echo "<a href ='modif_habitat.php?delete={$habitat['id']}'>Delete</a>\n";
+    echo "<a href='modif_habitat.php?validate={$habitat['id']}' class='form-btn'>Validate</a>\n";
+    echo "<a href ='modif_habitat.php?delete={$habitat['id']}' class='form-btn'>Delete</a>\n";
+    echo '</div>';
 }
 
 // si, le bouton validate est cliqué, le commentaire est validé et s'affiche dans la page avis.php
@@ -56,10 +65,20 @@ if ($conn->query($query) == TRUE) {
     echo "Error deleting record:  " . $conn->error;
 }}
 ?>
+ <br>
+    <br>
 
+    <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="modif_habitat.php">Modifier les habitats</a></li>
+            <li class="breadcrumb-item"><a href="ajout_habitat.php">Ajouter un habitat</a></li>
+            <li class="breadcrumb-item"><a href="habitat.php">Page habitats</a></li>
+        </ol>
+    </nav>
+    <br>
     <br>
     <button onclick="history.back()">Go Back</button><br>
-    <a href="admin.php">Home</a>
 
 </body>
 
