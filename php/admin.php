@@ -1,3 +1,4 @@
+admin.php
 <?php
 // Initialiser la session
 session_start();
@@ -73,12 +74,14 @@ if (!isset($_SESSION["username"])) {
     <li><a href="dashbord.php">Dashbord</a></li>
   </ul>
   <br>
+  <hr>
+  <br>
+
   <h3>Les Horaires</h3>
   <br>
   <ul class="nav nav-pills">
     <li><a href="ajout_horaire.php">Ajouter un horaire</a></li>
     <li><a href="modif_horaire.php">Modifier les horaires</a></li>
-    <li><a href="horaire.php">Page horaires</a></li>
   </ul>
   <br>
   

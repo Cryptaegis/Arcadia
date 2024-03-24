@@ -11,6 +11,8 @@
 </head>
 
 <body class="ac-admin">
+<img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+
 
   <h1 class="titre-admin">La santé des animaux</h1>
 
@@ -95,11 +97,17 @@
     <img class="card-img-bottom" src="../images/zebra1.jpg" alt="Card image cap">
   </div>
   <br><br>
-  <form action="" method="post" id="logout">
-    <input type="submit" value="Déconnexion" />
-  </form>
+   <!--danger zone bootstrap-->
+   <h3 class="titre-admin">Zone de danger</h3>
+  <div class="alert alert-warning">
+    <strong>Attention!</strong> Vous êtes sur le point de vous déconnecter.
+  </div>
+  <button type="submit" class="btn btn-danger dangerous" id="logout" onclick="window.location.href='logout.php'">Déconnexion</button>
+  </ul>
+  </div>
   <br>
-  <button onclick="history.back()">Go Back</button>
+  <br>
+  <button onclick="history.back()" class="form-btn dangerous">Go Back</button>
   <br>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -1,3 +1,4 @@
+
 h1 {
   margin: 10%;
 }
@@ -99,7 +100,7 @@ img {
   width: 40%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .animal-link {
     font-size: 2rem;
     width: 70%;

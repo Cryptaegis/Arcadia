@@ -41,7 +41,7 @@ if (isset($_GET['delete'])) {
     $query = "DELETE FROM animaux WHERE id = $id";
     mysqli_query($conn, $query);
 if ($conn->query($query) == TRUE) {
-    echo "Je vous félicite vous venez de supprimer un habitat.";
+    echo "Je vous félicite vous venez de supprimer un animal.";
 }else {
     echo "Error deleting record:  " . $conn->error;
 }}

@@ -1,3 +1,12 @@
+<?php
+require('connexion.php');
+  // Check connection
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -58,7 +67,14 @@
                         <img src="../images/arcadia2.jpg" alt="arcadia" class="img-circle">
                     </td>
                     <td class='bottom-text'>
-                        <p>Le nom Arcadia provient du grec ancien et signifie "pays des bergers".<br />Ce mammifère est originaire d'Asie et d'Afrique. Il est utilisé pour le transport de marchandises et de personnes. Il est également utilisé pour la production de lait et de viande.</p>
+                        <p>Les horaires du Zoo</p>
+                        <?php
+                        $sql = 'SELECT * FROM horaire WHERE nom = "Zoo"';
+                        $resultat = mysqli_query($conn, $sql);
+                        while ($unHoraire = mysqli_fetch_assoc($resultat)) {
+                            echo "<p class='border-form' style='width:100%;'> " . $unHoraire["jour"] . " - Ouverteur: " . $unHoraire["heureDebut"] . " - Fermeture: " . $unHoraire["heureFin"] . "</p>";
+                        }
+                        ?>
                     </td>
                 </tr>
             </table>
@@ -208,11 +224,7 @@
     <!--BLOC CONTENU DES AVIS COMMENTAIRES-->
 
     <?php
-    require('connexion.php');
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+  
     //only the validate comments
     $query = "SELECT * FROM comments WHERE validate = 1 ORDER BY id DESC";
     $result = mysqli_query($conn, $query);
@@ -260,3 +272,4 @@
 </body>
 
 </html>
+>>>>>>> Stashed changes

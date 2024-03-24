@@ -1,9 +1,14 @@
+<?php
+require "connexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- css -->
@@ -21,12 +26,7 @@
     <h1>Nos Services Arcadia</h1>
     <!--ajout de la liste des services à partir de la base donnée avec un bouton modifier qui envoie vers une autre page-->
     <?php
-    // Attempt to connect to the database   
-    require "connexion.php";
-    // Check connection
-    if ($conn === false) {
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
+   
     // Attempt select query execution
     $sql = "SELECT * FROM services";
     if ($result = mysqli_query($conn, $sql)) {
@@ -71,6 +71,15 @@
         <h3>Engagement envers la Durabilité :</h3>
         <p>Le Restaurant de l'Oasis partage l'engagement du Zoo Arcadia envers la durabilité. Nous utilisons des produits locaux autant que possible, réduisons les déchets et adoptons des pratiques respectueuses de l'environnement pour minimiser notre empreinte écologique.</p>
     </div>
+    <br>
+    <h3>Les horaires</h3>
+    <?php
+    $sql = 'SELECT * FROM horaire WHERE nom = "Restaurant"';
+    $resultat = mysqli_query($conn, $sql);
+    while ($unHoraire = mysqli_fetch_assoc($resultat)) {
+        echo "<p class='border-form' style='width:50%;'> " . $unHoraire["jour"] . " - Ouverteur: " . $unHoraire["heureDebut"] . " - Fermeture: " . $unHoraire["heureFin"] . "</p>";
+    }
+    ?>
     <div>
         <h2>Les Guides</h2>
         <img class="service2" src="../images/guide1.jpg" alt="guide zoo">
@@ -91,6 +100,16 @@
         </ul>
     </div>
     <br>
+    <br>
+    <h3>Les horaires</h3>
+    <?php
+    $sql = 'SELECT * FROM horaire WHERE nom = "Guide"';
+    $resultat = mysqli_query($conn, $sql);
+    while ($unHoraire = mysqli_fetch_assoc($resultat)) {
+        echo "<p class='border-form' style='width:30%; margin-left:10%;'> " . $unHoraire["jour"] . " - Ouverteur: " . $unHoraire["heureDebut"] . " - Fermeture: " . $unHoraire["heureFin"] . "</p>";
+    }
+    ?>
+    <br>
     <div>
         <h2>Notre train</h2>
         <img class="service3" src="../images/train1.jpg" alt="train zoo">
@@ -108,13 +127,21 @@
         <p>Les billets pour l'excursion en train peuvent être achetés à l'avance en ligne ou directement à l'entrée du zoo. Consultez nos horaires pour connaître les départs réguliers tout au long de la journée.</p>
         <!--links-->
     </div>
+    <br>
+    <h3>Les horaires</h3>
+    <?php
+    $sql = 'SELECT * FROM horaire WHERE nom = "Train"';
+    $resultat = mysqli_query($conn, $sql);
+    while ($unHoraire = mysqli_fetch_assoc($resultat)) {
+        echo "<p class='border-form' style='width:50%;'> " . $unHoraire["jour"] . " - Ouverteur: " . $unHoraire["heureDebut"] . " - Fermeture: " . $unHoraire["heureFin"] . "</p>";
+    }
+    ?>
+    <br>
+
     <?php include "_partial/footer.php"; ?>
     <br>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

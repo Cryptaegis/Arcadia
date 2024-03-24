@@ -1,14 +1,33 @@
-<?php
-   $to = $email;
-   $subject = 'Registration Confirmation';
-   $message = 'Thank you for registering on our website. Please click the following link to confirm your account: <a href="http://localhost/Tutos%20PHP/%2314%20%28Espace%20membre%29/confirmation.php?key=' . uniqid() . '">Confirm Account</a>';
-   $headers = 'From: ravenwolf700@gmail.com' . "\r\n" .
-       'Reply-To: ravenwolf700@gmail.com' . "\r\n" .
-       'X-Mailer: PHP/' . phpversion();
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document</title>
+         <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    </head>
+    <body class='vitrine-accueil'>
+    <?php include "_partial/header.php"; ?>
+    <br>
+    <?php include "_partial/navbar.php"; ?>
+    <br>
+    <?php
 
-   if (mail($to, $subject, $message, $headers)) {
-       echo 'Email sent successfully';
-   } else {
-       echo 'Email sending failed';
-   }
-?>
+    if (isset($_POST['message'])) {
+        $retour = mail('sendmail.monsite@gmail.com', 'Envoi depuis la page Contact', $_POST['message'], 'From:' . "\r\n" . 'Reply-to: ' . $_POST['email']);
+        if($retour)
+            echo '<p>Votre message a bien été envoyé!</p>';
+    }
+    else {
+        echo '<p>Veuillez remplir le formulaire</p>';
+    }
+    ?>
+    <br>
+    <br>
+    <?php include "_partial/footer.php"; ?>
+
+    </body>
+    </html>

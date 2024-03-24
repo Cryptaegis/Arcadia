@@ -56,7 +56,7 @@
     </form>
     <br>
     <br>
-
+                
     <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
@@ -66,7 +66,7 @@
         </ol>
     </nav>
     <br>
-    <button onclick="history.back()">Go Back</button><br>
+    <button onclick="history.back()" class="form-btn">Go Back</button><br>
 
 </body>
 </html>

@@ -1,17 +1,17 @@
+sql
 CREATE TABLE users
 (
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     username varchar(255)  NOT NULL,
     password varchar(255) NOT NULL,
-   confirme BOOLEAN NOT NULL DEFAULT 0
+    admin BINARY(11) DEFAULT 0 NOT NULL 
 )ENGINE = InnoDB;
-
 CREATE TABLE observation
 (
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
     animal varchar(255)  NOT NULL,
-    date date NOT NULL,
-    time text(4) NOT NULL,
+    date TEXT(10) NOT NULL,
+    time int(4),
     observation varchar(255)  NOT NULL,
     etat varchar(255) NOT NULL,
     amelioration varchar(255) NOT NULL 
@@ -20,10 +20,15 @@ CREATE TABLE observation
 CREATE TABLE alimentation
 (
     id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    animal varchar(255)  NOT NULL
-    FOREIGN KEY REFERENCES animaux(prenom) ON DELETE CASCADE,
-    date DATETIME,
+    animal varchar(255)  NOT NULL,
+    date TEXT(10) NOT NULL,
     time int(4),
+<<<<<<< Updated upstream
+    observation varchar(255)  NOT NULL,
+    etat varchar(255) NOT NULL,
+    amelioration varchar(255) NOT NULL 
+)ENGINE = InnoDB;
+=======
     nourriture varchar(255) NOT NULL,
     quantite varchar(255)  NOT NULL
     )ENGINE = InnoDB;
@@ -64,19 +69,14 @@ CREATE TABLE alimentation
     view int(255) NULL DEFAULT 0
     )ENGINE = InnoDB;
 
+
+
     CREATE TABLE horaire
 (
+    id int AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    nom varchar(255)  NOT NULL,
     jour char(3) NOT NULL,
     heureDebut time NOT NULL,
     heureFin time NOT NULL,
-    service int NOT NULL,
-    FOREIGN KEY (service) REFERENCES services(id) ON DELETE CASCADE
 )ENGINE = InnoDB;
 
-CREATE TABLE `img` (
-    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-     `nom` VARCHAR(100) NOT NULL,
-      `taille` INT NOT NULL,
-       `type` VARCHAR(20) NOT NULL,
-        `bin` LONGBLOB NOT NULL, PRIMARY KEY (`id`)
-) ENGINE = InnoDB;
