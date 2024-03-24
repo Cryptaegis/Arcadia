@@ -35,11 +35,17 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
   }}
 ?>
+<<<<<<< Updated upstream
 <form class="box" action="" method="post" name="login">
 <h1 class="box-logo box-title">
   <a href="https://waytolearnx.com/">WayToLearnX.com</a>
 </h1>
 <h1 class="box-title">Connexion</h1>
+=======
+
+<form class="box-login" action="" method="post" name="login" style="color:black; border:solid black 3px; height:auto; width:50%; margin-left:25%; padding: 20px;">
+<h1 class="box-title ac-admin titre-admin">Connexion</h1>
+>>>>>>> Stashed changes
 <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
 <input type="password" class="box-input" name="password" placeholder="Mot de passe">
 <input type="submit" value="Connexion " name="submit" class="box-button">
@@ -50,5 +56,13 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     <p class="errorMessage"><?php echo $message; ?></p>
 <?php } ?>
 </form>
+<<<<<<< Updated upstream
+=======
+<br><br>
+ <!--button to go back to the previous page -->
+ <br>
+    <a href="index.php" class="btn btn-primary form-btn ">Accueil</a>
+    <br>
+>>>>>>> Stashed changes
 </body>
 </html>
