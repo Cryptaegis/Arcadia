@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<html lang="fr">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+</head>
+<body class="ac-admin titre-admin">
+<a href="admin.php">
+      <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+    </a>
+    <br>
+    <br>
 <?php
 require('connexion.php');
 session_start();
@@ -24,7 +35,7 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     $user = mysqli_fetch_assoc($result);
     // vérifier si l'utilisateur est un administrateur ou un utilisateur
     if ($user['type'] == 'admin') {
-      header('location: home.php');
+      header('location: admin.php');
     } elseif ($user['type'] == 'vétérinaire') {
       header('location: ac-vet.php');
     } elseif ($user['type'] == 'régulateur') {
@@ -39,10 +50,8 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 <h1 class="box-title ac-admin titre-admin">Connexion</h1>
 <input type="text" class="box-input" name="username" placeholder="Nom d'utilisateur">
 <input type="password" class="box-input" name="password" placeholder="Mot de passe">
-<input type="submit" value="Connexion " name="submit" class="box-button">
-<p class="box-register">Vous êtes nouveau ici? 
-  <a href="register.php">S'inscrire</a>
-</p>
+<input type="submit" value="Connexion " name="submit" class="box-button form-btn">
+
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>
 <?php } ?>

@@ -1,4 +1,3 @@
-admin.php
 <?php
 // Initialiser la session
 session_start();

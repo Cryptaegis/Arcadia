@@ -107,7 +107,7 @@
         </ol>
     </nav>
 <br>
-  <button onclick="history.back()">Go Back</button>
+  <button onclick="history.back()" class="form-btn">Go Back</button>
 
 </body>
 
