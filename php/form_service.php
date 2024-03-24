@@ -37,7 +37,7 @@
         }
     }
     ?>
-    <form class="border-form  style-form" action="" method="post">
+    <form class="border-form" action="" method="post">
         <div>
             <label for="libelle">Libellé</label>
             <br>

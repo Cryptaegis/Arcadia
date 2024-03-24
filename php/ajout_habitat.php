@@ -36,7 +36,7 @@
     
 ?> 
     <!--create a form-->
-    <form action ="" method="post" class="border-form style-form">
+    <form action ="" method="post" class="border-form">
     <label for="nom">Nom:</label>
       <input class="box-input" type="text" id="nom" name="nom" required>
       <br>

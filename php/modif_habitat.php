@@ -33,7 +33,7 @@ $habitats = mysqli_fetch_all($result, MYSQLI_ASSOC);
 //ajouter un bouton validate ET delete
 echo "<h1>Habitat to validate OR DELETE</h1>\n";
 foreach ($habitats as $habitat){
-    echo "<div  class='border-form style-form'>\n";
+    echo "<div  class='border-form'>\n";
     echo "<h2>{$habitat['nom']}</h2>\n";
     //when description display all of the textarea
     echo "<p><strong>Description : </strong></p>\n";

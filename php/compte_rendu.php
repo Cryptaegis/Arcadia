@@ -87,7 +87,7 @@
 
     <!--form that will send you to a page if lion is selected-->
 
-    <form action="" method="post" class="border-form style-form">
+    <form action="" method="post" class="border-form">
       <h2>Observation Vétérinaire</h2>
       <br>
       <!--add option animal-->

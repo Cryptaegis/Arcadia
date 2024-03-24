@@ -109,7 +109,6 @@
         <!--links-->
     </div>
     <?php include "_partial/footer.php"; ?>
-    <button onclick="history.back()">Go Back</button>
     <br>
 
     <!-- jQuery library -->

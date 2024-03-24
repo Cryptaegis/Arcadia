@@ -46,7 +46,7 @@ if ($conn->query($query) == TRUE) {
     echo "Error deleting record:  " . $conn->error;
 }}
 ?>
-    <table class="border-form style-form">
+    <table class="border-form">
         <tr>
             <th>Prenom</th>
             <th>Race</th>

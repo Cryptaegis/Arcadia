@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>je suis header kun!</h1>
+<img class="logo-arcadia background-ac" src="../images/arcadia_logo.png" alt="Arcadia logo">
+<br>
+<br>
 </body>
 </html>

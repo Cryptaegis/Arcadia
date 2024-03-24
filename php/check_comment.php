@@ -27,7 +27,7 @@
     //ajouter un bouton validate ET delete
     echo "<h1>Commentaires non traité</h1>";
     foreach ($comments as $comment) {
-        echo '<div class="border-form style-form">';
+        echo '<div class="border-form">';
         echo "<h2>{$comment['username']}</h2>\n";
         echo "<p>{$comment['comment']}</p>\n";
         echo "<a href='check_comment.php?validate={$comment['id']}' class='form-btn'>Validate</a>\n";

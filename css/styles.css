@@ -5,6 +5,8 @@ img {
   width: 100%;
   height: auto;
 }
+/*logo*/
+
 .logo-arcadia {
   width: 15%;
   height: auto;
@@ -16,6 +18,14 @@ img {
   height: 100%;
   padding: 2%;
   background: linear-gradient(to bottom right, #cbe5eb, #6dcff6);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5),
+    -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
+}
+.background-ac{
+  width: 10%;
+  height: 100%;
+  padding: 2%;
+  background: linear-gradient(to bottom right, #7ca196, #509467);
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5),
     -10px -10px 20px 0px rgba(255, 255, 255, 0.5);
 }
@@ -202,6 +212,7 @@ img {
   margin: 0 auto;
   width: 50%;
   background-color: #cbe5eb;
+  color: #040404;
 }
 .form-btn {
   color: rgb(253, 250, 250);
@@ -218,12 +229,56 @@ img {
   color: #1d4632;
   background-color: #fff;
 }
+.top{
+  margin-left:47%;
+  position:absolute;
 
-.style-form {
-  color: #040404;
 }
+
 /*PAGE Admin*/
 .nav-pills {
   margin: 0 auto;
   width: 30%;
+}
+
+.card-img-top {
+  width: 50%;
+  border-radius: 70%;
+  border: #000000 solid 10px;
+}
+.central-card {
+  width: 100%;
+  margin: 0 auto;
+}
+/*Accueil Page*/
+.ac-p {
+  border-radius: 20%;
+  border-top: #000000 solid 10px;
+  border-bottom: #000000 solid 10px;
+  border-right: transparent;
+  padding: 2%;
+  margin: 0 auto;
+  width: 50%;
+  background-color: #cbe5eb;
+  color: #040404;
+}
+
+/*navbar*/
+.nav-index{
+margin-left: 12%;
+}
+/*footer*/
+.footer-p{
+  text-align: center;
+  background-color:#cbe5eb;
+  color: #ffffff;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  padding:10%;
+  height:100%;
+  width:100%;
+
+}
+.back{
+  margin-right: 100%;
 }

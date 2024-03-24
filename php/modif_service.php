@@ -30,7 +30,7 @@
         die('Error in SQL');
     }
     if (mysqli_num_rows($result) > 0) {
-        echo "<table  class='border-form style-form'>";
+        echo "<table  class='border-form'>";
         echo "<tr>";
         echo "<th>id</th>";
         echo "<th>service</th>";

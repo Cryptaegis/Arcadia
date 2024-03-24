@@ -48,7 +48,7 @@
         <label for="comment">Avis:</label><br>
         <textarea id="comment" name="comment" rows="4" cols="50" class="form-comment" placeholder="Your feedback is important to us. Please share your thoughts, suggestions, or criticisms. Your comment will be published after moderation."></textarea><br><br>
 
-        <input type="submit" name="submit" value="Add Comment">
+        <input type="submit" name="submit" value="Valider" class="form-btn">
     </form>
     <?php
     if (isset($_POST['submit'])) {
@@ -67,11 +67,7 @@
     }
     ?>
     <?php include "_partial/footer.php"; ?>
-
-    <!--button to go back to the previous page -->
-    <br>
-    <a href="javascript:history.back()" class="btn btn-primary">Retour</a>
-    <br>
+<br>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->

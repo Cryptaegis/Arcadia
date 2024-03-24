@@ -53,7 +53,8 @@ if (!isset($_SESSION["username"])) {
   <h3>Compte rendu Vétérinaire</h3>
   <br>
   <ul class="nav nav-pills">
-    <li><a href="admin_cr.php">Carnet de santé</a></li>
+    <li><a href="admin_cr.php">Rapport</a></li>
+    <li><a href="carnet_sante.php">Carnet de santé</a></li>
   </ul>
   <hr>
   <br>
@@ -80,12 +81,7 @@ if (!isset($_SESSION["username"])) {
     <li><a href="horaire.php">Page horaires</a></li>
   </ul>
   <br>
-  <h3>Les Images</h3>
-  <br>
-  <ul class="nav nav-pills">
-    <li><a href="img.php">Ajouter une image</a></li>
-  </ul>
-  <br>
+  
   <!--danger zone bootstrap-->
   <h3>Zone de danger</h3>
   <div class="alert alert-warning">

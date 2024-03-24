@@ -29,13 +29,14 @@ if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
     mysqli_free_result($result);
     foreach ($row as $rows) {
-        echo '<div class="card" style="width: 18rem;">';
+        echo '<div class="card border-form" style="width: 18rem;">';
             echo "<h5 class='card-title'>".$rows['animal']."</h5>";
             echo "<h5 class='card-title'>".$rows['date']."</h5>";
             echo "<p class='card-text'>Observation : ".$rows['observation']."</p>";
             echo "<p class='card-text'>Etat : ".$rows['etat']."</p>";
             echo "<p class='card-text'>Amélioration : ".$rows['amelioration']."</p>";
         echo '</div>';
+        echo "<br>";
     }
 } else {
     echo 
@@ -46,7 +47,7 @@ if (mysqli_num_rows($result) > 0) {
 ?>
 
 
-<form action="" method="get" class="border-form ">
+<form action="" method="get" class="border-form">
     <label for="animal">Animal:</label>
     <select name="animal" id="animal">
         <option value="">Tous</option>
@@ -63,7 +64,7 @@ if (mysqli_num_rows($result) > 0) {
         <option value="this_week">Cette semaine</option>
         </select>
 
-    <button type="submit">Filtrer</button>    
+    <button type="submit" class="form-btn">Filtrer</button>    
 </form>
 <br>
     <br>

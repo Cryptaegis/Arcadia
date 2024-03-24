@@ -39,7 +39,7 @@
     
 ?> 
     <!--create a form-->
-    <form action ="" method="post" class="border-form style-form">
+    <form action ="" method="post" class="border-form">
     <label for="prenom">prenom:</label>
     <br>
       <input class="box-input" type="text" id="prenom" name="prenom" required>
