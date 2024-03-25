@@ -283,3 +283,7 @@ margin-left: 12%;
 .back{
   margin-right: 100%;
 }
+.habit-img{
+  width:50%;
+  border-radius: 20%;
+}

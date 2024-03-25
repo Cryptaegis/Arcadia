@@ -32,12 +32,12 @@ require "connexion.php";
     if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
             //card
-            echo "<div class='container'>\n
+            echo "<div class='container '>\n
             <div class='row'>\n";
             while ($row = mysqli_fetch_array($result)) {
                 echo "<div class='col-md-4'>\n
                 <div class='card'>\n
-                <div class='card-body'>\n
+                <div class='card-body ac-p'>\n
                 <h5 class='card-title'>" . $row['libelle'] . "</h5>\n
                 <p class='card-text'>" . $row['descriptionService'] . "</p>\n
                 </div>\n
