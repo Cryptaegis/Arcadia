@@ -15,7 +15,6 @@
     <a href="admin.php">
         <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
     </a>
-    <!--create a form that modify the data from the table 'services'-->
     <h1>Modification de services</h1>
     <?php
     // Attempt to connect to the database
@@ -56,12 +55,10 @@
         echo "<br>";
 
 
-        // Free result set
         mysqli_free_result($result);
     } else {
         echo "No records matching your query were found.";
     }
-    //Modification des données
     if (isset($_POST['libelle']) && isset($_POST['descriptionService']) && isset($_POST['id'])) {
         $libelle = htmlspecialchars($_POST['libelle'], ENT_QUOTES);
 
@@ -74,7 +71,7 @@
             echo "ERROR: Could not able to execute $sql. ";
         }
     }
-    //suppression des données 
+    //btn delete 
     if (isset($_POST["delete"])) {
         $id = $_POST["id"];
         if ($conn->connect_error) {
@@ -93,16 +90,18 @@
     ?>
     <!--link-->
     <br>
-   
-   <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><a href="modif_service.php">Modifier services</a></li>
-        <li class="breadcrumb-item"><a href="form_service.php">Ajout services</a></li>
-        <li class="breadcrumb-item"><a href="service.php">Page service</a></li>
-      </ol>
+
+    <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="modif_service.php">Modifier services</a></li>
+            <li class="breadcrumb-item"><a href="form_service.php">Ajout services</a></li>
+            <li class="breadcrumb-item"><a href="service.php">Page service</a></li>
+        </ol>
     </nav>
-<br>
+    <br>
+    <button onclick="history.back()" class="form-btn">Go Back</button><br>
+
 </body>
 
 </html>

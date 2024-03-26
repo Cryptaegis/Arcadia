@@ -10,29 +10,28 @@ $animal = filter_input(INPUT_GET, 'animal');
 $date_range = filter_input(INPUT_GET, 'date_range');
 switch ($date_range) {
   case 'last_week':
-      $start_date = $last_week_start;
-      $end_date = $last_week_end;
-      break;
+    $start_date = $last_week_start;
+    $end_date = $last_week_end;
+    break;
   case 'this_week':
-      $start_date = $this_week_start;
-      $end_date = $this_week_end;
-      break;
+    $start_date = $this_week_start;
+    $end_date = $this_week_end;
+    break;
   default:
-      $start_date = $today;
-      $end_date = $today;
+    $start_date = $today;
+    $end_date = $today;
 }
 
 $query = "SELECT * FROM observation WHERE date BETWEEN '$start_date' AND '$end_date'";
 
 if ($animal) {
-$query .= " AND animal = '$animal'";
+  $query .= " AND animal = '$animal'";
 }
 
 $result = mysqli_query($conn, $query);
 
 
 
-if($result === false) {
+if ($result === false) {
   die("Error executing query: $query");
-} 
-?>
+}

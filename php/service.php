@@ -8,7 +8,7 @@ require "connexion.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- css -->
@@ -26,7 +26,7 @@ require "connexion.php";
     <h1>Nos Services Arcadia</h1>
     <!--ajout de la liste des services à partir de la base donnée avec un bouton modifier qui envoie vers une autre page-->
     <?php
-   
+
     // Attempt select query execution
     $sql = "SELECT * FROM services";
     if ($result = mysqli_query($conn, $sql)) {
@@ -45,9 +45,8 @@ require "connexion.php";
                 </div>\n";
             }
             echo "\n</div>\n
-            </div>"; // fermeture du container et row
+            </div>";
 
-            // Close result set
             mysqli_free_result($result);
         } else {
             echo "No records found.";
@@ -58,7 +57,7 @@ require "connexion.php";
         );
     }
     ?>
-    <!--presentation Oasis restaurant-->
+    <!--section restaurant-->
     <div>
         <h2>L'Oasis</h2>
         <img class="service1" src="../images/restaurant1.jpg" alt="restaurant plat">

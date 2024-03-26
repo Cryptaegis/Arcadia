@@ -31,7 +31,7 @@
 
   require 'connexion.php';
 
-  // les data Lion du tableau observation pour les afficher à chaque ajout
+  //Data jaguar
   $query = "SELECT * FROM observation WHERE animal = 'jaguar'";
   $resultat = mysqli_query($conn, $query);
   $row = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
@@ -61,7 +61,6 @@
   <p class="ac-p">L'alimentation d'un jaguar dans un zoo est composée de viande fraîche, tels que des morceaux de boeuf, poulet ou mouton, généralement distribués en portions de 2 à 3 kilogrammes pour assurer un apport nutritif adéquat. Les jaguars sont des carnivores, donc leur alimentation se compose principalement de viande, avec parfois l'ajout de compléments alimentaires pour garantir un régime équilibré.</p>
   <br>
   <?php
-  // les data Lion du tableau Alimentation pour les afficher à chaque ajout
   $sql = "SELECT * FROM alimentation WHERE animal = 'jaguar'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_all($result, MYSQLI_ASSOC);

@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Animaux</title>
-       <!-- Latest compiled and minified CSS -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
 
-<body  class="ac-admin titre-admin">
-<a href="admin.php">
-      <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
-    </a>
-    <br>
-    <br>
-    <h1>Nombre de vue par animaux</h1>
+<body class="ac-admin titre-admin">
+  <a href="admin.php">
+    <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+  </a>
+  <br>
+  <br>
+  <h1>Nombre de vue par animaux</h1>
   <?php
 
   session_start();
@@ -30,10 +30,9 @@
 
   $query = "SELECT * FROM animaux WHERE view";
   $result = mysqli_query($conn, $query);
-  
+
   if ($result) {
     $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    
   } else {
     echo "Error: " . mysqli_error($conn) . $row . $query;
   }
@@ -51,10 +50,10 @@
     window.onload = function() {
       var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
-        title:{
+        title: {
           text: "Nombre de vues par animaux"
         },
-        subtitles:[{
+        subtitles: [{
           text: "Nombre de vues"
         }],
         data: [{
@@ -69,16 +68,16 @@
 
       chart.render();
 
-      
+
     }
 
     function updateChart() {
       var chart = new CanvasJS.Chart("chartContainer", {
         animationEnabled: true,
-        title:{
+        title: {
           text: "Nombre de vues par animaux"
         },
-        subtitles:[{
+        subtitles: [{
           text: "Nombre de vues"
         }],
         data: [{
@@ -93,21 +92,21 @@
 
       chart.render();
     }
-</script>
+  </script>
 
-  
+
 </body>
 <br>
-    <br>
-
-    <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="dashbord.php">Dashbord</a></li>
-        </ol>
-    </nav>
 <br>
-  <button onclick="history.back()" class="form-btn">Go Back</button>
+
+<nav aria-label="breadcrumb" style="width:50%; margin:auto;">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="dashbord.php">Dashbord</a></li>
+  </ol>
+</nav>
+<br>
+<button onclick="history.back()" class="form-btn">Go Back</button>
 
 </body>
 

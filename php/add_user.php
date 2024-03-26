@@ -11,6 +11,7 @@
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
+
 <body class="ac-admin titre-admin">
   <div class="sucess">
 
@@ -19,36 +20,36 @@
     </a>
     <br>
     <br>
-  <?php
-  require('connexion.php');
+    <?php
+    require('connexion.php');
 
-  if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUEST['password'])) {
-    // récupérer le nom d'utilisateur 
-    $username = stripslashes($_REQUEST['username']);
-    $username = mysqli_real_escape_string($conn, $username);
-    // récupérer l'email 
-    $email = stripslashes($_REQUEST['email']);
-    $email = mysqli_real_escape_string($conn, $email);
-    // récupérer le mot de passe 
-    $password = stripslashes($_REQUEST['password']);
-    $password = mysqli_real_escape_string($conn, $password);
-    // récupérer le type (user | admin)
-    $type = stripslashes($_REQUEST['type']);
-    $type = mysqli_real_escape_string($conn, $type);
+    if (isset($_REQUEST['username'], $_REQUEST['email'], $_REQUEST['type'], $_REQUEST['password'])) {
+      // récupérer le nom d'utilisateur 
+      $username = stripslashes($_REQUEST['username']);
+      $username = mysqli_real_escape_string($conn, $username);
+      // récupérer l'email 
+      $email = stripslashes($_REQUEST['email']);
+      $email = mysqli_real_escape_string($conn, $email);
+      // récupérer le mot de passe 
+      $password = stripslashes($_REQUEST['password']);
+      $password = mysqli_real_escape_string($conn, $password);
+      // récupérer le type (user | admin)
+      $type = stripslashes($_REQUEST['type']);
+      $type = mysqli_real_escape_string($conn, $type);
 
-    $query = "INSERT into `users` (username, email, type, password)
+      $query = "INSERT into `users` (username, email, type, password)
           VALUES ('$username', '$email', '$type', '" . hash('sha256', $password) . "')";
-    $res = mysqli_query($conn, $query);
+      $res = mysqli_query($conn, $query);
 
-    if ($res) {
-      echo "<div class='sucess'>
+      if ($res) {
+        echo "<div class='sucess'>
              <h3>L'utilisateur a été créée avec succés.</h3>
              <p>Cliquez <a href='index.php'>ici</a> pour retourner à la page d'accueil</p>
        </div>";
+      }
     }
-  }
 
-  ?>
+    ?>
     <form class="box border-form" action="" method="post">
       <h1 class="box-logo box-title">
       </h1>
@@ -66,12 +67,12 @@
       <br>
       <button class="btn btn-submit btn-primary form-btn" type="submit" name="submit">Ajouter</button>
     </form>
-<br>
+    <br>
 
-<nav aria-label="breadcrumb" style="width:50%; margin:auto;">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-        </ol>
+    <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
+      </ol>
     </nav>
 </body>
 

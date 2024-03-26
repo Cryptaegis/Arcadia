@@ -64,51 +64,51 @@
             <br>
             <img src="../images/lion1.jpg" alt="Lion" class="card-img-top">
             <br>
-        <a id="savane" href="Lion_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la savane</a>
-      <?php elseif (strpos($animal['race'], 'girafe') !== false) : ?>
-        <br>
-        <img src="../images/girafe1.jpg" alt="Girafe" class="card-img-top">
-        <br>
-        <a id="savane" href="girafe_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la savane</a>
-      <?php elseif (strpos($animal['race'], 'zèbre') !== false) : ?>
-        <br>
-        <img src="../images/zebra2.jpg" alt="Zèbre" class="card-img-top">
-        <br>
-        <a id="savane" href="zebre_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la savane</a>
-      <?php elseif (strpos($animal['race'], 'chimpanze') !== false) : ?>
-        <br>
-        <img src="../images/chimpanzee3.jpg" alt="Chimpanze" class="card-img-top">
-        <br>
-        <a id="jungle" href="chimpanze_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la Jungle</a>
-      <?php elseif (strpos($animal['race'], 'aigle') !== false) : ?>
-        <br>
-        <img src="../images/aigle1.jpg" alt="Aigle" class="card-img-top">
-        <br>
-        <a id="jungle" href="aigle_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la Jungle</a>
-      <?php elseif (strpos($animal['race'], 'jaguar') !== false) : ?>
-        <br>
-        <img src="../images/jaguar1.jpg" alt="Jaguar" class="card-img-top">
-        <br>
-        <a id="jungle" href="jaguar_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la Jungle</a>
-      <?php elseif (strpos($animal['race'], 'cigogne') !== false) : ?>
-        <br>
-        <img src="../images/cigogne1.jpg" alt="Cigogne" class="card-img-top">
-        <br>
-        <a id="marais" href="cigogne_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans le marais</a>
-      <?php elseif (strpos($animal['race'], 'canard') !== false) : ?>
-        <br>
-        <img src="../images/duck3.jpg" alt="Canard" class="card-img-top">
-        <br>
-        <a id="marais" href="canard_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans le marais</a>
-      <?php elseif (strpos($animal['race'], 'loutre') !== false) : ?>
-        <br>
-        <img src="../images/loutre1.jpg" alt="Loutre" class="card-img-top">
-        <br>
-        <a id="riviere" href="loutre_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans le marais</a>
-      <?php else : ?>
-        Bientôt dans Arcadia
-      <?php endif; ?>
-      </p>
+            <a id="savane" href="Lion_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la savane</a>
+          <?php elseif (strpos($animal['race'], 'girafe') !== false) : ?>
+            <br>
+            <img src="../images/girafe1.jpg" alt="Girafe" class="card-img-top">
+            <br>
+            <a id="savane" href="girafe_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la savane</a>
+          <?php elseif (strpos($animal['race'], 'zèbre') !== false) : ?>
+            <br>
+            <img src="../images/zebra2.jpg" alt="Zèbre" class="card-img-top">
+            <br>
+            <a id="savane" href="zebre_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la savane</a>
+          <?php elseif (strpos($animal['race'], 'chimpanze') !== false) : ?>
+            <br>
+            <img src="../images/chimpanzee3.jpg" alt="Chimpanze" class="card-img-top">
+            <br>
+            <a id="jungle" href="chimpanze_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la Jungle</a>
+          <?php elseif (strpos($animal['race'], 'aigle') !== false) : ?>
+            <br>
+            <img src="../images/aigle1.jpg" alt="Aigle" class="card-img-top">
+            <br>
+            <a id="jungle" href="aigle_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la Jungle</a>
+          <?php elseif (strpos($animal['race'], 'jaguar') !== false) : ?>
+            <br>
+            <img src="../images/jaguar1.jpg" alt="Jaguar" class="card-img-top">
+            <br>
+            <a id="jungle" href="jaguar_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans la Jungle</a>
+          <?php elseif (strpos($animal['race'], 'cigogne') !== false) : ?>
+            <br>
+            <img src="../images/cigogne1.jpg" alt="Cigogne" class="card-img-top">
+            <br>
+            <a id="marais" href="cigogne_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans le marais</a>
+          <?php elseif (strpos($animal['race'], 'canard') !== false) : ?>
+            <br>
+            <img src="../images/duck3.jpg" alt="Canard" class="card-img-top">
+            <br>
+            <a id="marais" href="canard_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans le marais</a>
+          <?php elseif (strpos($animal['race'], 'loutre') !== false) : ?>
+            <br>
+            <img src="../images/loutre1.jpg" alt="Loutre" class="card-img-top">
+            <br>
+            <a id="riviere" href="loutre_sante.php" onclick="<?php updateView($animal['id']) ?>" class="btn btn-primary form-btn">dans le marais</a>
+          <?php else : ?>
+            Bientôt dans Arcadia
+          <?php endif; ?>
+        </p>
       </div>
     </div>
   <?php endforeach; ?>

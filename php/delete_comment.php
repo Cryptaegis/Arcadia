@@ -25,4 +25,4 @@ if (isset($_POST['delete_comment'])) {
 
 $conn->close();
 ?>
-    <a href="ac-regul.php">HOME</a>
+<a href="ac-regul.php">HOME</a>

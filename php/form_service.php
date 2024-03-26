@@ -44,7 +44,7 @@
             <input type="text" id="libelle" name="libelle" required>
         </div>
         <div>
-            <!--textarea that does allow apostrophe? -->
+        
             <label for="descriptionService">Description du service</label>
             <br>
             <textarea style="height:150px;  resize: none; width:100%;" id="descriptionService" name="descriptionService" required></textarea>
@@ -66,7 +66,7 @@
     </nav>
     <br>
 
-    <button onclick="history.back()">Go Back</button>
+    <button onclick="history.back()" class="form-btn">Go Back</button>
     <br>
     <a href="admin.php">HOME</a>
     <br>

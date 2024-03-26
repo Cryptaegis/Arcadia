@@ -30,7 +30,7 @@
   <?php
   require 'connexion.php';
 
-  // les data Lion du tableau observation pour les afficher à chaque ajout
+  // Data girafe
   $query = "SELECT * FROM observation WHERE animal = 'girafe'";
   $resultat = mysqli_query($conn, $query);
   $row = mysqli_fetch_all($resultat, MYSQLI_ASSOC);

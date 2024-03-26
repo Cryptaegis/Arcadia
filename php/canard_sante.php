@@ -31,7 +31,6 @@
 
   require 'connexion.php';
 
-  // les data Lion du tableau observation pour les afficher à chaque ajout
   $query = "SELECT * FROM observation WHERE animal = 'canard'";
   $resultat = mysqli_query($conn, $query);
   $row = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
@@ -60,7 +59,6 @@
   <p class="ac-p">L'alimentation d'un canard se compose généralement d'un mélange de grains et de légumes, avec une quantité recommandée de 200 à 250 grammes par jour. Ces oiseaux sont omnivores et ont besoin d'une alimentation équilibrée pour maintenir leur santé et leur niveau d'énergie. Il est essentiel de fournir une variété d'aliments pour répondre à leurs besoins nutritionnels, tels que des céréales, des légumes verts, des fruits, et de l'eau fraîche en quantité suffisante. Il est également important de surveiller leur alimentation pour éviter un surpoids et les complications associées.</p>
   <br>
   <?php
-  // les data Lion du tableau Alimentation pour les afficher à chaque ajout
   $sql = "SELECT * FROM alimentation WHERE animal = 'canard'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_all($result, MYSQLI_ASSOC);

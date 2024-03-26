@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Animaux modification</title>
-         <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
 </head>
 
 <body class="ac-admin titre-admin">
-<br>
+    <br>
     <a href="admin.php">
-      <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+        <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
     </a>
     <br>
     <br>
@@ -33,33 +33,34 @@
         die('Error in SQL');
     }
     $query = "SELECT * FROM animaux";
-$result = mysqli_query($conn, $query);
-$animaux = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    $result = mysqli_query($conn, $query);
+    $animaux = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-if (isset($_GET['delete'])) {
-    $id = $_GET['delete'];
-    $query = "DELETE FROM animaux WHERE id = $id";
-    mysqli_query($conn, $query);
-if ($conn->query($query) == TRUE) {
-    echo "Je vous félicite vous venez de supprimer un animal.";
-}else {
-    echo "Error deleting record:  " . $conn->error;
-}}
-?>
+    if (isset($_GET['delete'])) {
+        $id = $_GET['delete'];
+        $query = "DELETE FROM animaux WHERE id = $id";
+        mysqli_query($conn, $query);
+        if ($conn->query($query) == TRUE) {
+            echo "Je vous félicite vous venez de supprimer un animal.";
+        } else {
+            echo "Error deleting record:  " . $conn->error;
+        }
+    }
+    ?>
     <table class="border-form">
         <tr>
             <th>Prenom</th>
             <th>Race</th>
             <th>Habitat</th>
         </tr>
-        <!-- Affichage des résultats -->
-        <?php foreach ($animaux as $row): ?>
-        <tr>
-            <td><?php echo $row['prenom']; ?></td>
-            <td><?php echo $row['race'] ?></td>
-            <td><?php echo $row["habitat"]; ?></td>
-            <td><a href="modif_animal.php?delete=<?php echo $row['id']; ?>" class="form-btn">Delete</a></td>
-        </tr>
+        <!-- display result -->
+        <?php foreach ($animaux as $row) : ?>
+            <tr>
+                <td><?php echo $row['prenom']; ?></td>
+                <td><?php echo $row['race'] ?></td>
+                <td><?php echo $row["habitat"]; ?></td>
+                <td><a href="modif_animal.php?delete=<?php echo $row['id']; ?>" class="form-btn">Delete</a></td>
+            </tr>
         <?php endforeach; ?>
     </table>
     <br>

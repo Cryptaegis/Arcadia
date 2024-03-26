@@ -27,7 +27,6 @@
   <?php
   require 'connexion.php';
 
-  // les data Lion du tableau observation pour les afficher à chaque ajout
   $query = "SELECT * FROM observation WHERE animal = 'Chimpanze'";
   $resultat = mysqli_query($conn, $query);
   $row = mysqli_fetch_all($resultat, MYSQLI_ASSOC);
@@ -57,7 +56,7 @@
   <p class="ac-p">Dans le zoo, l'alimentation d'un chimpanzé est soigneusement préparée pour répondre à ses besoins nutritionnels. Il reçoit en moyenne 300 grammes de fruits variés par jour, tels que des bananes, des pommes et des oranges, ainsi que 200 grammes de légumes, comme des carottes et des feuilles vertes. De plus, il est nourri avec 500 grammes de grains et de noix pour fournir les protéines et les graisses nécessaires à sa santé. Enfin, le chimpanzé reçoit également des suppléments vitaminiques pour compléter son régime alimentaire équilibré.</p>
   <br>
   <?php
-  // les data Lion du tableau Alimentation pour les afficher à chaque ajout
+
   $sql = "SELECT * FROM alimentation WHERE animal = 'Chimpanze'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_all($result, MYSQLI_ASSOC);

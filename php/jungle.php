@@ -19,7 +19,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    // display only the savane animals
+    // display only the savane animals of the jungle 
     $sql = "SELECT * FROM animaux WHERE habitat
     LIKE '%jungle%' OR '%Jungle%'";
 

@@ -30,12 +30,11 @@
     $query = "SELECT * FROM habitat WHERE validate = 0";
 $result = mysqli_query($conn, $query);
 $habitats = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//ajouter un bouton validate ET delete
+//button validate and delete
 echo "<h1>Habitat to validate OR DELETE</h1>\n";
 foreach ($habitats as $habitat){
     echo "<div  class='border-form'>\n";
     echo "<h2>{$habitat['nom']}</h2>\n";
-    //when description display all of the textarea
     echo "<p><strong>Description : </strong></p>\n";
     echo "<p>{$habitat['descriptionHabitat']}</p>\n";
     echo "<p>{$habitat['animaux']}</p>\n";
@@ -44,7 +43,7 @@ foreach ($habitats as $habitat){
     echo '</div>';
 }
 
-// si, le bouton validate est cliqué, le commentaire est validé et s'affiche dans la page avis.php
+// if, click validate and send to accueil.php
 if (isset($_GET['validate'])) {
     $id = $_GET['validate'];
     $query = "UPDATE habitat SET validate = 1 WHERE id = $id";
@@ -54,7 +53,7 @@ if (isset($_GET['validate'])) {
     }else {
         echo "Error deleting record:  " . $conn->error;
     }}
-//si, le button delete
+//if, click delete
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $query = "DELETE FROM habitat WHERE id = $id";
@@ -78,7 +77,7 @@ if ($conn->query($query) == TRUE) {
     </nav>
     <br>
     <br>
-    <button onclick="history.back()">Go Back</button><br>
+    <button onclick="history.back()" class="form-btn">Go Back</button><br>
 
 </body>
 

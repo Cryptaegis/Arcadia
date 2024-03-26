@@ -26,7 +26,7 @@
 
   // Check if form is submitted
   if (isset($_POST['submit'])) {
-    // Sanitize and store form data in the table arcadia
+
     $animal = htmlspecialchars(strip_tags($_POST['animal']));
     $date = htmlspecialchars(strip_tags($_POST['date']));
     $time = htmlspecialchars(strip_tags($_POST['time']));
@@ -45,7 +45,7 @@
       echo "Alimentation added successfully";
     }
   }
-  //si, select Lion envoyer vers la page carnet_sante.php
+  //si, select -> carnet_sante.php
 
   if (isset($_POST['animal'])) {
     $animal = $_POST['animal'];

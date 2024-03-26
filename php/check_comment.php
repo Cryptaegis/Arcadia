@@ -24,7 +24,7 @@
     $query = "SELECT * FROM comments WHERE validate = 0";
     $result = mysqli_query($conn, $query);
     $comments = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    //ajouter un bouton validate ET delete
+    //add button validate and delete
     echo "<h1>Commentaires non traité</h1>";
     foreach ($comments as $comment) {
         echo '<div class="border-form">';
@@ -35,26 +35,26 @@
         echo '</div>';
     }
 
-    // si, le bouton validate est cliqué, le commentaire est validé et s'affiche dans la page accueil.php
+    // if click, comment valide and send to accueil.php 
     if (isset($_GET['validate'])) {
         $id = $_GET['validate'];
         $query = "UPDATE comments SET validate = 1 WHERE id = $id";
         mysqli_query($conn, $query);
         header('location: accueil.php');
     }
-    //si, le button delete
+    //if, button delete
     if (isset($_GET['delete'])) {
         $id = $_GET['delete'];
         $query = "DELETE FROM comments WHERE id = $id";
         mysqli_query($conn, $query);
-echo"Supprimer félicitation!";
+        echo "Supprimer félicitation!";
     }
     ?>
 
 
     <?php include "_partial/navbar-regul.php"; ?>
-   <!-- jQuery library -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
