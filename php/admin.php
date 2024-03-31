@@ -83,7 +83,7 @@ if (!isset($_SESSION["username"])) {
     <li><a href="modif_horaire.php">Modifier les horaires</a></li>
   </ul>
   <br>
-  
+
   <!--danger zone bootstrap-->
   <h3>Zone de danger</h3>
   <div class="alert alert-warning">

@@ -1,7 +1,7 @@
 <?php
 require('connexion.php');
-  // Check connection
-  if ($conn->connect_error) {
+// Check connection
+if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
@@ -224,7 +224,7 @@ require('connexion.php');
     <!--BLOC CONTENU DES AVIS COMMENTAIRES-->
 
     <?php
-  
+
     //only the validate comments
     $query = "SELECT * FROM comments WHERE validate = 1 ORDER BY id DESC";
     $result = mysqli_query($conn, $query);
@@ -243,7 +243,7 @@ require('connexion.php');
         <div class="col-lg-12">
             <h2 class="page-header">Avis et Commentaires</h2>
         </div>
-    </div>  
+    </div>
     <br /><br />
     <div class="row row-comment">
         <?php foreach ($row as $comment) : ?>
@@ -262,7 +262,7 @@ require('connexion.php');
             </div>
         <?php endforeach; ?>
     </div>
-         <br>
+    <br>
     <?php include "_partial/footer.php"; ?>
     <br>
     <!-- jQuery library -->
@@ -272,4 +272,3 @@ require('connexion.php');
 </body>
 
 </html>
->>>>>>> Stashed changes

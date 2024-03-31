@@ -1,0 +1,18 @@
+// {type:class}
+// {direction:topDown}
+// {generate:true}
+
+[note: Diagramme de class du Zoo Arcadia.{bg:purple}]
+[Arcadia system]1-1>[Admin|createusers(); editusers(); addcontent(); editcontent(); deletecontent();]
+[Admin]1- create*>[users|id: int; username: varchar; password: varchar; admin: binary| login(); logout();]
+[Admin]1-*>[animals|id: int; prenom: varchar; race: varchar; habitat: varchar; view: int;]
+[Admin]1-*>[habitat| id : int; nom: descriptionHabitat:varchar;  animaux:varchar; validate: BINARY;]
+[Admin]1-*>[services| id:int; libelle:varchar; descriptionService:varchar;]
+[Admin]1-*>[vétérinaire|add(); edit(); delete();]
+[Admin]1-*>[Employee|add(); edit(); delete();]
+[Employee]*-*>[Alimentation| id:int; animal:varchar; date:datetime; time:int; nourriture:varchar; quantité:varchar;]
+[Employee]*-*>[services| id:int; libelle:varchar; descriptionService:varchar;]
+[vétérinaire]* -*>[observation| id:int; animal:varchar; date:datetime; time:int; observation:varchar; etat: varchar; amelioration:varchar; ]
+[users] gestion- >[Employee]
+[users] gestion->[vétérinaire]
+

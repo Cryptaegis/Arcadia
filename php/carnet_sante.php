@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- Notylesheet -->
+  <!-- Css -->
   <link rel="stylesheet" href="../css/styles.css" />
   <title>Carnet de santé</title>
 </head>
 
 <body class="ac-admin">
-<img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+  <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
 
 
   <h1 class="titre-admin">La santé des animaux</h1>
@@ -97,8 +97,8 @@
     <img class="card-img-bottom" src="../images/zebra1.jpg" alt="Card image cap">
   </div>
   <br><br>
-   <!--danger zone bootstrap-->
-   <h3 class="titre-admin">Zone de danger</h3>
+  <!--danger zone bootstrap-->
+  <h3 class="titre-admin">Zone de danger</h3>
   <div class="alert alert-warning">
     <strong>Attention!</strong> Vous êtes sur le point de vous déconnecter.
   </div>
