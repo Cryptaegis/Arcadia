@@ -31,7 +31,7 @@
 $result = mysqli_query($conn, $query);
 $habitats = mysqli_fetch_all($result, MYSQLI_ASSOC);
 //button validate and delete
-echo "<h1>Habitat to validate OR DELETE</h1>\n";
+echo "<h1>Modification Habitat</h1>\n";
 foreach ($habitats as $habitat){
     echo "<div  class='border-form'>\n";
     echo "<h2>{$habitat['nom']}</h2>\n";

@@ -54,7 +54,7 @@
     <textarea id="animaux" name="animaux" rows="4" cols="50" required></textarea>
     <br>
 
-    <input type="submit" name="submit" value="Ajout Animal" class="form-btn">
+    <input type="submit" name="submit" value="Ajout habitat" class="form-btn">
 
   </form>
   <br>

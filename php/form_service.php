@@ -67,9 +67,7 @@
     <br>
 
     <button onclick="history.back()" class="form-btn">Go Back</button>
-    <br>
-    <a href="admin.php">HOME</a>
-    <br>
+  
 
 </body>
 

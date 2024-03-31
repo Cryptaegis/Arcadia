@@ -74,7 +74,8 @@
     <nav aria-label="breadcrumb" style="width:50%; margin:auto;">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="admin.php">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="admin_cr.php">Carnet de santé</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="admin_cr.php">Rapport</a></li>
+            <li><a href="carnet_sante.php">Carnet de santé</a></li>
         </ol>
     </nav>
     <br>

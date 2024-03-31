@@ -12,7 +12,11 @@
 </head>
 
 <body class=" ac-admin titre-admin">
-
+<a href="admin.php">
+    <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+  </a>
+  <br>
+  <br>
 
 
     <?php

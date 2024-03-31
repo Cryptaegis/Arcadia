@@ -12,6 +12,11 @@
 </head>
 
 <body class="ac-admin titre-admin">
+<a href="admin.php">
+    <img class="logo-arcadia background" src="../images/arcadia_logo.png" alt="Arcadia logo">
+  </a>
+  <br>
+  <br>
   <?php
   // Start the session
   session_start();
@@ -79,7 +84,7 @@
   <!--form that will send you to a page if lion is selected-->
 
   <form action="" method="post" class="border-form">
-    <h2>Ajout Observation</h2>
+    <h2>ALIMENTATION </h2>
     <br>
     <!--add option animal-->
     <label for="animal">Animal:</label>
@@ -116,7 +121,7 @@
     <input class="box-input" type="text" id="quantite" name="quantite" required>
     <br>
     <br>
-    <input type="submit" name="submit" value="Add Nourriture">
+    <input type="submit" name="submit" value="Valider" class="form-btn">
   </form>
   <br>
   <?php include "_partial/navbar-regul.php"; ?>

@@ -39,7 +39,9 @@ if ($conn->connect_error) {
 
             <div class="col-md-4 text-top">
                 <h3>L'Arcadia</h3>
-                <p>Le parc national de l'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
+                <p>Arcadia est un zoo situé en France près de la forêt de Brocéliande, en bretagne depuis 1960.
+                    Ils possèdent tout un panel d’animaux, réparti par habitat (savane, jungle, marais) et font
+                    extrêmement attention à leurs santés. </p>
                 </a>
             </div>
 
@@ -51,7 +53,12 @@ if ($conn->connect_error) {
                         <img src="../images/arcadia.jpg" alt="arcadia" class="img-circle">
                     </td>
                     <td>
-                        <p class="middle-text">L'Arcadia est un parc animalier situé à 30 minutes de Paris. Il est ouvert toute l'année et propose des activités pour toute la famille. Vous pourrez y découvrir des animaux sauvages et domestiques. Vous pourrez également assister à des spectacles d'animaux.</p>
+                        <p class="middle-text">Chaque jour, plusieurs vétérinaires viennent afin
+                            d’effectuer les contrôles sur chaque animal avant l’ouverture du zoo afin de s’assurer que tout
+                            se passe bien, de même, toute la nourriture donnée est calculée afin d’avoir le bon grammage
+                            (le bon grammage est précisé dans le rapport du vétérinaire).
+                            Le zoo, se porte très bien financièrement, les animaux sont heureux. Cela fait la fierté de son
+                            directeur, José, qui a de grandes ambitions.</p>
                     </td>
                 </tr>
                 <tr>
